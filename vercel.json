@@ -6,13 +6,9 @@
     { "src": "crm-system/**", "use": "@vercel/static" }
   ],
   "routes": [
-    {
-      "src": "/app/(.*)",
-      "dest": "/crm-system/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public-site/$1"
-    }
+    { "src": "^/app/?$", "dest": "/crm-system/dashboard.html" },
+    { "src": "^/app/(.*)$", "dest": "/crm-system/$1" },
+    { "src": "^/$", "dest": "/public-site/index.html" },
+    { "src": "^/(.*)$", "dest": "/public-site/$1" }
   ]
 }
