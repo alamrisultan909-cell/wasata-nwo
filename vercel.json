@@ -1,10 +1,12 @@
+
+```json
 {
   "version": 2,
+  "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/public-site/index.html" },
-    { "source": "/app", "destination": "/crm-system/index.html" },
-    { "source": "/app/contracts.html", "destination": "/crm-system/contracts.html" },
-    { "source": "/app/financials.html", "destination": "/crm-system/financials.html" },
-    { "source": "/api/sheets", "destination": "/api/sheets" }
+    { "source": "/app/(.*)", "destination": "/crm-system/$1" },
+    { "source": "/app", "destination": "/crm-system/dashboard.html" },
+    { "source": "/(.*)", "destination": "/public-site/$1" }
   ]
 }
+```
