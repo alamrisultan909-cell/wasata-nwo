@@ -1,12 +1,208 @@
-<!-- Source Code: SCREEN_126 -->
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>الموقع العام</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مؤسسة المنصة الشاملة للوساطة</title>
+  <style>
+    :root {
+      --primary: #1e293b;
+      --accent: #0ea5e9;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans Arabic", "Tahoma", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      border-inline: 1px solid var(--border);
+    }
+
+    .header {
+      background: linear-gradient(90deg, var(--primary) 0 60%, var(--accent) 60% 100%);
+      color: #fff;
+      padding: 24px 20px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    .brand h2 {
+      margin: 6px 0 0;
+      font-size: 20px;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .meta {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-box {
+      text-align: center;
+      background: #ffffffdd;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 12px 14px;
+      min-width: 250px;
+    }
+
+    .logo-box .logo {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #6b7280;
+    }
+
+    .logo-box .name {
+      margin-top: 4px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .logo-box .tag {
+      margin-top: 2px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 32px 16px;
+    }
+
+    .welcome {
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 780px;
+      width: 100%;
+    }
+
+    .welcome h3 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+
+    .welcome p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .btn.secondary {
+      color: var(--primary);
+      background: #fff;
+    }
+
+    .footer {
+      background: linear-gradient(90deg, var(--accent) 0 12%, var(--primary) 12% 100%);
+      color: #fff;
+      padding: 16px 20px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        grid-template-columns: 1fr;
+      }
+      .brand h1 { font-size: 22px; }
+      .brand h2 { font-size: 16px; }
+      .meta { font-size: 16px; }
+      .footer { font-size: 16px; }
+      .welcome h3 { font-size: 24px; }
+      .welcome p { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-  <header>...</header>
-  <main>المحتوى الرئيسي</main>
+  <div class="page">
+    <header class="header">
+      <div class="brand">
+        <h1>مؤسسة المنصة الشاملة للوساطة</h1>
+        <h2>Comprehensive Mediation Platform Foundation</h2>
+        <div class="meta">
+          <span>س.ت 1010874516</span>
+          <span>الرقم الضريبي 3115057569</span>
+        </div>
+      </div>
+
+      <div class="logo-box" aria-label="هوية المؤسسة">
+        <div class="logo">▮▮▮</div>
+        <div class="name">المنصة الشاملة للوساطة</div>
+        <div class="tag">Elevate Your Financial Reach</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <h3>مرحبًا بكم</h3>
+        <p>
+          تم تشغيل الموقع الرسمي بنجاح. يمكنكم الآن الوصول إلى الخدمات العامة أو الدخول إلى نظام إدارة الوساطة.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="/app">الدخول إلى النظام</a>
+          <a class="btn secondary" href="https://www.wasata.sa">تحديث الصفحة الرئيسية</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      alamrisultan909@gmail.com - الرمز البريدي 12563 - جوال 0596067718
+    </footer>
+  </div>
 </body>
 </html>
