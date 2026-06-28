@@ -1,26 +1,15 @@
 function getAuth() {
   const clientEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  let privateKey = process.env.GOOGLE_PRIVATE_KEY || "";
+  const keyB64 = process.env.GOOGLE_PRIVATE_KEY_BASE64;
 
-  if (!clientEmail || !privateKey) {
-    throw new Error("Missing GOOGLE_SERVICE_ACCOUNT_EMAIL or GOOGLE_PRIVATE_KEY");
+  if (!clientEmail || !keyB64) {
+    throw new Error("Missing GOOGLE_SERVICE_ACCOUNT_EMAIL or GOOGLE_PRIVATE_KEY_BASE64");
   }
 
-  // remove wrapping quotes first
-  privateKey = privateKey.trim();
-  if (
-    (privateKey.startsWith('"') && privateKey.endsWith('"')) ||
-    (privateKey.startsWith("'") && privateKey.endsWith("'"))
-  ) {
-    privateKey = privateKey.slice(1, -1);
-  }
+  const privateKey = Buffer.from(keyB64, "base64").toString("utf8").trim();
 
-  // normalize escaped newlines
-  privateKey = privateKey.replace(/\\n/g, "\n").trim();
-
-  // quick format guard
   if (!privateKey.includes("BEGIN PRIVATE KEY") || !privateKey.includes("END PRIVATE KEY")) {
-    throw new Error("GOOGLE_PRIVATE_KEY format invalid");
+    throw new Error("Decoded private key is invalid");
   }
 
   return new google.auth.JWT({
