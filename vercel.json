@@ -1,5 +1,5 @@
 
-```json
+
 {
   "version": 2,
   "cleanUrls": true,
@@ -9,4 +9,4 @@
     { "source": "/(.*)", "destination": "/public-site/$1" }
   ]
 }
-```
+
