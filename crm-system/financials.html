@@ -1,4 +1,128 @@
-<!-- Source Code: SCREEN_44 -->
-<section class="financial-metrics">
-  <table>...</table>
-</section>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الإدارة المالية | نظام الوساطة</title>
+  <style>
+    :root{
+      --primary:#0f172a;--accent:#0ea5e9;--bg:#f8fafc;--card:#fff;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--danger:#dc2626;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .topbar{background:linear-gradient(90deg,var(--primary),#1e293b);color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+    .topbar a{color:#fff;text-decoration:none;background:rgba(255,255,255,.15);padding:8px 12px;border-radius:8px;font-size:14px}
+    .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:14px}
+    .muted{color:var(--muted);font-size:13px}
+    .toolbar{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;margin-top:12px}
+    input,select,button{padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:14px}
+    button{border:none;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}
+    table{width:100%;border-collapse:collapse;background:#fff}
+    th,td{border-bottom:1px solid var(--border);padding:10px;text-align:right;font-size:14px}
+    th{background:#f1f5f9}
+    .btn-danger{background:var(--danger);padding:6px 10px;border-radius:8px}
+    .kpi{font-size:28px;font-weight:700}
+    @media (max-width:900px){.toolbar{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <strong>نظام إدارة العملاء - الإدارة المالية</strong>
+    <a href="/app">العودة للوحة التحكم</a>
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="muted">إجمالي العمولات</div>
+      <div id="totalAmount" class="kpi">0</div>
+    </div>
+
+    <div class="card">
+      <strong>إضافة حركة مالية</strong>
+      <div class="toolbar">
+        <input id="itemName" placeholder="الوصف (عمولة بيع شقة...)" />
+        <input id="itemAmount" type="number" placeholder="المبلغ" />
+        <select id="itemType">
+          <option value="دخل">دخل</option>
+          <option value="مصروف">مصروف</option>
+        </select>
+        <button id="addBtn">إضافة</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr><th>#</th><th>الوصف</th><th>النوع</th><th>المبلغ</th><th>التاريخ</th><th>إجراء</th></tr>
+        </thead>
+        <tbody id="finBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const KEY = "wasata_financials_v1";
+    const bodyEl = document.getElementById("finBody");
+    const totalEl = document.getElementById("totalAmount");
+
+    function load(){ try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch{return[]} }
+    function save(v){ localStorage.setItem(KEY, JSON.stringify(v)); }
+
+    function render(){
+      const rows = load();
+      const total = rows.reduce((s,r)=>{
+        const a = Number(r.amount)||0;
+        return r.type === "مصروف" ? s - a : s + a;
+      },0);
+      totalEl.textContent = total.toLocaleString("ar-SA");
+
+      if(!rows.length){
+        bodyEl.innerHTML = `<tr><td colspan="6" class="muted">لا توجد حركات مالية.</td></tr>`;
+        return;
+      }
+
+      bodyEl.innerHTML = rows.map((r,i)=>`
+        <tr>
+          <td>${i+1}</td>
+          <td>${r.name}</td>
+          <td>${r.type}</td>
+          <td>${Number(r.amount).toLocaleString("ar-SA")}</td>
+          <td>${r.date}</td>
+          <td><button class="btn-danger" onclick="delRow(${i})">حذف</button></td>
+        </tr>
+      `).join("");
+    }
+
+    function add(){
+      const name = document.getElementById("itemName").value.trim();
+      const amount = Number(document.getElementById("itemAmount").value);
+      const type = document.getElementById("itemType").value;
+
+      if(!name || !amount){ alert("أدخل الوصف والمبلغ"); return; }
+
+      const rows = load();
+      rows.unshift({
+        name, amount, type,
+        date:new Date().toLocaleDateString("ar-SA")
+      });
+      save(rows);
+
+      document.getElementById("itemName").value = "";
+      document.getElementById("itemAmount").value = "";
+      document.getElementById("itemType").value = "دخل";
+      render();
+    }
+
+    window.delRow = function(i){
+      if(!confirm("تأكيد حذف الحركة؟")) return;
+      const rows = load();
+      rows.splice(i,1);
+      save(rows);
+      render();
+    }
+
+    document.getElementById("addBtn").addEventListener("click", add);
+    render();
+  </script>
+</body>
+</html>
