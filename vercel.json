@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "name": "comprehensive-mediation-platform",
-  "builds": [
-    { "src": "public-site/**", "use": "@vercel/static" },
-    { "src": "crm-system/**", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "^/app/?$", "dest": "/crm-system/dashboard.html" },
-    { "src": "^/app/(.*)$", "dest": "/crm-system/$1" },
-    { "src": "^/$", "dest": "/public-site/index.html" },
-    { "src": "^/(.*)$", "dest": "/public-site/$1" }
+  "functions": {
+    "crm-system/api/sheets.js": {
+      "runtime": "@vercel/node@3.0.0"
+    }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/public-site/index.html" },
+    { "source": "/app", "destination": "/crm-system/index.html" },
+    { "source": "/app/contracts.html", "destination": "/crm-system/contracts.html" },
+    { "source": "/app/financials.html", "destination": "/crm-system/financials.html" },
+    { "source": "/api/sheets", "destination": "/crm-system/api/sheets.js" }
   ]
 }
