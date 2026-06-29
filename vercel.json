@@ -1,12 +1,1 @@
-{
-  "version": 2,
-  "name": "wasata-platform",
-  "cleanUrls": true,
-  "framework": null,
-  "rewrites": [
-    { "source": "/app/(.*)", "destination": "/crm-system/$1" },
-    { "source": "/app", "destination": "/crm-system/dashboard.html" },
-    { "source": "/knowledge-base/(.*)", "destination": "/knowledge-base/$1" },
-    { "source": "/(.*)", "destination": "/public-site/$1" }
-  ]
-}
+ { "version": 2, "name": "wasata-platform", "cleanUrls": true, "rewrites": [ { "source": "/app/(.*)", "destination": "/crm-system/$1" }, { "source": "/app", "destination": "/crm-system/dashboard.html" }, { "source": "/knowledge-base/(.*)", "destination": "/knowledge-base/$1" }, { "source": "/(.*)", "destination": "/public-site/$1" } ] } ```
