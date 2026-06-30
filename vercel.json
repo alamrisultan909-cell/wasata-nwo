@@ -3,7 +3,7 @@
   "name": "wasata-platform",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/api/sheets", "destination": "/api/sheets" },
+    { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/app", "destination": "/crm-system/dashboard.html" },
     { "source": "/app/(.*)", "destination": "/crm-system/$1" },
     { "source": "/knowledge-base", "destination": "/knowledge-base/index.html" },
