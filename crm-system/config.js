@@ -1,3 +1,4 @@
+// Google Sheets API Configuration - Comprehensive Mediation Platform
 const CONFIG = {
     SPREADSHEET_ID: '1N-E6G5-SULTAN-WASATA-SHEET-ID', 
     PRIVATE_KEY: `-----BEGIN PRIVATE KEY-----
