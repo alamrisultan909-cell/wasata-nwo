@@ -2,6 +2,7 @@
   "name": "wasata-platform",
   "version": "1.2.0",
   "private": true,
+  "description": "Comprehensive Mediation Platform - Unified System",
   "dependencies": {
     "uuid": "^11.0.3"
   },
