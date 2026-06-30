@@ -74,7 +74,18 @@ u+1Q8yEMC6lOgquUjMTVtw==
     DEPLOYMENT_URL: 'https://wasata.sa/app',
     PUBLIC_SITE_URL: 'https://wasata.sa'
 };
-export default CONFIG;
+
+function keyFromEnv() {
+  const b64 = process.env.GOOGLE_PRIVATE_KEY_BASE64;
+  if (b64) {
+    return Buffer.from(b64, "base64").toString("utf8").replace(/\\n/g, "\n").trim();
+  }
+  const rawKey = process.env.GOOGLE_PRIVATE_KEY;
+  if (rawKey) {
+    return rawKey.replace(/\\n/g, "\n").trim();
+  }
+  return CONFIG.PRIVATE_KEY;
+}
 
 async function readFromGoogle(type) {
   const spreadsheetId = process.env.SPREADSHEET_ID;

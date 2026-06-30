@@ -48,5 +48,46 @@
             </div>
         </section>
     </main>
+    <script>
+        async function loadClients() {
+            try {
+                const res = await fetch('/api/sheets?type=customers');
+                const data = await res.json();
+                if (data && data.ok && data.headers && data.rows) {
+                    const thead = document.querySelector('thead tr');
+                    const tbody = document.querySelector('tbody');
+                    if (thead && tbody) {
+                        thead.innerHTML = '';
+                        tbody.innerHTML = '';
+                        
+                        data.headers.forEach(header => {
+                            const th = document.createElement('th');
+                            th.className = 'p-4';
+                            th.textContent = header;
+                            thead.appendChild(th);
+                        });
+                        
+                        data.rows.forEach(row => {
+                            const tr = document.createElement('tr');
+                            tr.className = 'hover:bg-slate-50';
+                            row.forEach((cell, idx) => {
+                                const td = document.createElement('td');
+                                td.className = 'p-4';
+                                if (idx === 0) {
+                                    td.className += ' font-bold';
+                                }
+                                td.textContent = cell;
+                                tr.appendChild(td);
+                            });
+                            tbody.appendChild(tr);
+                        });
+                    }
+                }
+            } catch (err) {
+                console.error('Error loading clients:', err);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', loadClients);
+    </script>
 </body>
 </html>

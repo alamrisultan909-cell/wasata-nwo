@@ -28,5 +28,85 @@
             </article>
         </section>
     </main>
+    <script>
+        async function loadFinancials() {
+            try {
+                const res = await fetch('/api/sheets?type=financials');
+                const data = await res.json();
+                if (data && data.ok && data.headers && data.rows) {
+                    // Update total commissions
+                    let incomeIdx = data.headers.findIndex(h => h.toLowerCase() === 'income' || h === 'الدخل' || h === 'income');
+                    if (incomeIdx === -1) {
+                        incomeIdx = 2; // fallback
+                    }
+                    let total = 0;
+                    if (incomeIdx !== -1 && incomeIdx < data.headers.length) {
+                        data.rows.forEach(row => {
+                            const val = parseFloat(row[incomeIdx]);
+                            if (!isNaN(val)) {
+                                total += val;
+                            }
+                        });
+                    }
+                    if (total > 0) {
+                        const totalEl = document.querySelector('h3.text-blue-600');
+                        if (totalEl) {
+                            totalEl.textContent = total.toLocaleString('ar-SA') + ' ر.س';
+                        }
+                    }
+                    
+                    // Add table of financials
+                    const mainContent = document.getElementById('main-content');
+                    if (mainContent) {
+                        const tableSection = document.createElement('section');
+                        tableSection.className = 'bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden mt-6';
+                        
+                        const tableWrapper = document.createElement('div');
+                        tableWrapper.className = 'overflow-x-auto';
+                        
+                        const table = document.createElement('table');
+                        table.className = 'w-full text-right';
+                        
+                        const thead = document.createElement('thead');
+                        thead.className = 'bg-slate-100 text-slate-600';
+                        const headerTr = document.createElement('tr');
+                        data.headers.forEach(header => {
+                            const th = document.createElement('th');
+                            th.className = 'p-4';
+                            th.textContent = header;
+                            headerTr.appendChild(th);
+                        });
+                        thead.appendChild(headerTr);
+                        table.appendChild(thead);
+                        
+                        const tbody = document.createElement('tbody');
+                        tbody.className = 'divide-y divide-slate-100';
+                        data.rows.forEach(row => {
+                            const tr = document.createElement('tr');
+                            tr.className = 'hover:bg-slate-50';
+                            row.forEach((cell, idx) => {
+                                const td = document.createElement('td');
+                                td.className = 'p-4';
+                                if (idx === 0) {
+                                    td.className += ' font-bold';
+                                }
+                                td.textContent = cell;
+                                tr.appendChild(td);
+                            });
+                            tbody.appendChild(tr);
+                        });
+                        table.appendChild(tbody);
+                        
+                        tableWrapper.appendChild(table);
+                        tableSection.appendChild(tableWrapper);
+                        mainContent.appendChild(tableSection);
+                    }
+                }
+            } catch (err) {
+                console.error('Error loading financials:', err);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', loadFinancials);
+    </script>
 </body>
 </html>
