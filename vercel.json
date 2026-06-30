@@ -1,4 +1,4 @@
-
+{
   "version": 2,
   "name": "wasata-platform",
   "cleanUrls": true,
@@ -23,3 +23,5 @@
       "source": "/(.*)",
       "destination": "/public-site/$1"
     }
+  ]
+}
