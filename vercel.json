@@ -3,10 +3,12 @@
   "name": "wasata-platform",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/app/(.*)", "destination": "/crm-system/$1" },
+    { "source": "/api/sheets", "destination": "/api/sheets" },
     { "source": "/app", "destination": "/crm-system/dashboard.html" },
-    { "source": "/knowledge-base/(.*)", "destination": "/knowledge-base/$1" },
+    { "source": "/app/(.*)", "destination": "/crm-system/$1" },
     { "source": "/knowledge-base", "destination": "/knowledge-base/index.html" },
+    { "source": "/knowledge-base/(.*)", "destination": "/knowledge-base/$1" },
+    { "source": "/", "destination": "/public-site/index.html" },
     { "source": "/(.*)", "destination": "/public-site/$1" }
   ]
 }
