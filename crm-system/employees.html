@@ -1,1 +1,312 @@
 
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>إدارة الموظفين - المنصة الشاملة للوساطة</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<style>
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#f7f9fb] text-[#1e293b]">
+<!-- Layout Container -->
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-white border-l border-slate-200 flex flex-col shrink-0 overflow-y-auto">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-8">
+<img alt="Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqMMmX3DJYZia1m_DH00MN_82AYvQW08lN9ranQTWQkbVKVqJroZwGTi_V6FD9n-N2KI9-D2zpx9Ocgh-I-Z500Qsrp1k340lSBzfISzPmKqKhlrU5tcFO5UwiDAksWRTip_JQ8WVTz0NQQAquI4U0H5wCPcvFgG-dTk4CD7-qDMpKnsasvUrxPT63CqtZwe8KzszQHJRg6w3DnBHEFgh-o8rzvxb_6odVyMGJkNqhe6ZmO8vTAsXOjMFK2b5Pg16Nuxw"/>
+<div>
+<h1 class="font-bold text-lg leading-tight text-[#004a99]">مركز الوساطة</h1>
+<p class="text-xs text-slate-500">نظام الإدارة المتكامل</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors" href="dashboard.html">
+<span class="material-icons-outlined text-[20px]">dashboard</span>
+<span class="font-medium">لوحة التحكم</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors" href="clients.html">
+<span class="material-icons-outlined text-[20px]">group</span>
+<span class="font-medium">إدارة العملاء</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors" href="financials.html">
+<span class="material-icons-outlined text-[20px]">account_balance_wallet</span>
+<span class="font-medium">الإدارة المالية</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#004a99] text-white rounded-xl shadow-lg shadow-blue-900/10" href="employees.html">
+<span class="material-icons-outlined text-[20px]">badge</span>
+<span class="font-medium">الموظفين والوسطاء</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors" href="knowledge-base.html">
+<span class="material-icons-outlined text-[20px]">menu_book</span>
+<span class="font-medium">قاعدة المعرفة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors" href="reports.html">
+<span class="material-icons-outlined text-[20px]">assessment</span>
+<span class="font-medium">التقارير</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors" href="#">
+<span class="material-icons-outlined text-[20px]">settings</span>
+<span class="font-medium">الإعدادات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-xl transition-colors" href="login.html">
+<span class="material-icons-outlined text-[20px]">logout</span>
+<span class="font-medium">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto relative">
+<!-- Top Header -->
+<header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200 px-8 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4 bg-slate-100 px-4 py-2 rounded-full w-96">
+<span class="material-icons-outlined text-slate-400">search</span>
+<input class="bg-transparent border-none outline-none text-sm w-full text-slate-600" placeholder="البحث عن موظف، رقم هوية..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 rounded-full transition-colors relative">
+<span class="material-icons-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
+<span class="material-icons-outlined">help_outline</span>
+</button>
+</div>
+<div class="h-10 w-px bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<div class="text-left">
+<p class="text-sm font-bold text-slate-900 leading-none">أحمد العتيبي</p>
+<p class="text-[10px] text-slate-500 mt-1">مدير النظام (Admin)</p>
+</div>
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-[#004a99]/20 object-contain p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnfgmVzzeRYn-4asnUB9wVmdYMXTqr07umnsbZJ6N_xJPHHVgG2f0F5cwb-UQr7QoYCv4VY0HCj0b3-apidK7Y7M44l1oNitY6qippZkKDZe_LOrmKMIEGYtcg1jFjCJ4epZg51mbXnn9N7JE92ogGkLK8WRU2KkBXBBUjpi5LElEk_SA7-a8MGDL2MzQETcolxOn32SIi8uyXEJ_bnIRNSs14daGeEfkwlJ_wQCdTcksoeqUIsMUZ_1aQlUNGavKzoqE"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-8 max-w-7xl mx-auto">
+<!-- Header Actions -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-3xl font-bold text-slate-900">إدارة الموظفين</h2>
+<p class="text-slate-500 mt-2">إدارة السجلات والوظائف والصلاحيات والوصول للمنصة</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-3 border border-slate-200 bg-white rounded-xl font-semibold hover:bg-slate-50 transition-all text-slate-700">
+<span class="material-icons-outlined text-[20px]">file_download</span>
+                            تصدير البيانات
+                        </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-[#004a99] text-white rounded-xl font-bold hover:bg-[#003d80] transition-all shadow-lg shadow-blue-900/20">
+<span class="material-icons-outlined">add</span>
+                            إضافة موظف جديد
+                        </button>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+<span class="material-icons-outlined">groups</span>
+</div>
+<span class="text-green-500 text-xs font-bold bg-green-50 px-2 py-1 rounded-lg">+4%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">إجمالي الموظفين</p>
+<h3 class="text-3xl font-bold mt-1">124</h3>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-green-50 text-green-600 rounded-xl">
+<span class="material-icons-outlined">person_search</span>
+</div>
+<span class="text-slate-400 text-xs font-bold bg-slate-50 px-2 py-1 rounded-lg">95%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">نشط حالياً</p>
+<h3 class="text-3xl font-bold mt-1">118</h3>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-orange-50 text-orange-600 rounded-xl">
+<span class="material-icons-outlined">assignment_turned_in</span>
+</div>
+<span class="text-green-500 text-xs font-bold bg-green-50 px-2 py-1 rounded-lg">+12%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">المهام المنجزة</p>
+<h3 class="text-3xl font-bold mt-1">842</h3>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-red-50 text-red-600 rounded-xl">
+<span class="material-icons-outlined">pending_actions</span>
+</div>
+</div>
+<p class="text-slate-500 text-sm font-medium">طلبات الإجازة</p>
+<h3 class="text-3xl font-bold mt-1 text-red-600">06 <span class="text-sm font-normal text-slate-400">معلق</span></h3>
+</div>
+</div>
+<!-- Table Container -->
+<div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+<h4 class="font-bold text-slate-900 flex items-center gap-2">
+<span class="w-2 h-6 bg-[#004a99] rounded-full"></span>
+                            قائمة الموظفين
+                            <span class="text-xs font-normal text-slate-400 mr-2">عرض 10 من أصل 124</span>
+</h4>
+<div class="flex gap-4">
+<button class="text-sm text-slate-500 hover:text-[#004a99] flex items-center gap-1">
+<span class="material-icons-outlined text-[18px]">filter_list</span>
+                                تصفية
+                            </button>
+<button class="text-sm text-slate-500 hover:text-[#004a99] flex items-center gap-1">
+<span class="material-icons-outlined text-[18px]">sort</span>
+                                ترتيب
+                            </button>
+</div>
+</div>
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="text-slate-500 text-sm border-b border-slate-100">
+<th class="px-6 py-4 font-semibold">الموظف</th>
+<th class="px-6 py-4 font-semibold text-center">المسمى الوظيفي</th>
+<th class="px-6 py-4 font-semibold">البريد الإلكتروني</th>
+<th class="px-6 py-4 font-semibold">رقم الجوال</th>
+<th class="px-6 py-4 font-semibold text-center">الحالة</th>
+<th class="px-6 py-4 font-semibold text-left">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">س م</div>
+<div>
+<p class="font-bold text-slate-900">سلطان محمد</p>
+<p class="text-[10px] text-slate-400">معرف: EMP-8821#</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center font-medium text-slate-600">مدير إقليمي</td>
+<td class="px-6 py-5 text-slate-500 text-sm">s.mohammed@brokerage.sa</td>
+<td class="px-6 py-5 font-mono text-slate-600 text-sm" dir="ltr">+966 50 123 4567</td>
+<td class="px-6 py-5 text-center">
+<span class="px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs font-bold">نشط</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all" title="تعديل">
+<span class="material-icons-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all" title="حذف">
+<span class="material-icons-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xs overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div>
+<p class="font-bold text-slate-900">نورة القحطاني</p>
+<p class="text-[10px] text-slate-400">معرف: EMP-8940#</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center font-medium text-slate-600">مستشار مالي</td>
+<td class="px-6 py-5 text-slate-500 text-sm">n.alqahtani@brokerage.sa</td>
+<td class="px-6 py-5 font-mono text-slate-600 text-sm" dir="ltr">+966 54 987 6543</td>
+<td class="px-6 py-5 text-center">
+<span class="px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs font-bold">نشط</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+<span class="material-icons-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all">
+<span class="material-icons-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">ف ز</div>
+<div>
+<p class="font-bold text-slate-900">فهد الزهراني</p>
+<p class="text-[10px] text-slate-400">معرف: EMP-9122#</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center font-medium text-slate-600">كاتب إداري</td>
+<td class="px-6 py-5 text-slate-500 text-sm">f.alzahrani@brokerage.sa</td>
+<td class="px-6 py-5 font-mono text-slate-600 text-sm" dir="ltr">+966 56 321 0987</td>
+<td class="px-6 py-5 text-center">
+<span class="px-3 py-1 bg-slate-100 text-slate-500 rounded-full text-xs font-bold">غير نشط</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+<span class="material-icons-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all">
+<span class="material-icons-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination -->
+<div class="p-6 bg-slate-50/50 border-t border-slate-100 flex justify-between items-center">
+<div class="flex items-center gap-2 text-sm text-slate-500 font-medium">
+                            عدد الصفوف لكل صفحة:
+                            <select class="bg-white border border-slate-200 rounded-lg px-2 py-1 outline-none">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 hover:bg-slate-50 transition-colors">
+<span class="material-icons-outlined text-sm">chevron_right</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#004a99] text-white font-bold text-xs">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 transition-colors text-xs">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 transition-colors text-xs">3</button>
+<span class="flex items-end px-1 text-slate-400 text-xs">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 transition-colors text-xs">12</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 hover:bg-slate-50 transition-colors">
+<span class="material-icons-outlined text-sm">chevron_left</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Alert -->
+<div class="mt-8 bg-blue-50 border border-blue-100 p-6 rounded-2xl flex gap-4">
+<span class="material-icons-outlined text-blue-600">info</span>
+<div>
+<h5 class="font-bold text-blue-900">ملاحظة تنظيمية</h5>
+<p class="text-sm text-blue-800/80 leading-relaxed mt-1">جميع التغييرات على سجلات الموظفين تخضع للتدقيق الآلي. يتم إرسال تنبيه فوري لقسم الموارد البشرية عند تغيير حالة الموظف إلى "غير نشط" أو عند تعديل الصلاحيات الأمنية.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body>
+</html>
