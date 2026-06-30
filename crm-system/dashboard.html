@@ -4,50 +4,191 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>لوحة تحكم المسؤول - المنصة الشاملة</title>
+<title>لوحة التحكم - المنصة الشاملة للوساطة</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        secondary: '#3b82f6',
+                        accent: '#f59e0b',
+                        surface: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; background-color: #f8fafc; }
+        .sidebar-item:hover { background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+        .sidebar-item.active { background-color: #3b82f6; color: white; }
+    </style>
 </head>
-<body class="bg-slate-50 font-['IBM_Plex_Sans_Arabic']">
-<div class="flex min-h-screen">
-<aside class="w-64 bg-slate-900 text-white p-6 hidden lg:block">
-<div class="flex items-center gap-3 mb-10">
-<img class="h-8" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-<span class="font-bold text-lg">الوساطة الشاملة</span>
+<body class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 bg-primary text-white flex flex-col fixed inset-y-0 right-0 z-50">
+<div class="p-6 flex flex-col items-center border-b border-white/10">
+<img alt="Logo" class="w-12 h-12 mb-2" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<h1 class="text-xl font-bold">الوساطة الشاملة</h1>
+<p class="text-xs text-white/60">نظام الإدارة المتكامل</p>
 </div>
-<nav class="space-y-4">
-<a class="flex items-center gap-3 p-3 bg-blue-600 rounded-xl" href="#"><span class="material-icons-round">dashboard</span> لوحة التحكم</a>
-<a class="flex items-center gap-3 p-3 text-slate-400 hover:text-white transition-all" href="#"><span class="material-icons-round">groups</span> إدارة العملاء</a>
-<a class="flex items-center gap-3 p-3 text-slate-400 hover:text-white transition-all" href="#"><span class="material-icons-round">payments</span> المالية</a>
+<nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+<a class="sidebar-item active flex items-center gap-3 px-4 py-3 rounded-xl transition-all" href="dashboard.html">
+<span class="material-icons-round">dashboard</span>
+<span class="font-medium">لوحة التحكم</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-xl text-white/70 transition-all" href="clients.html">
+<span class="material-icons-round">group</span>
+<span class="font-medium">متابعة العملاء</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-xl text-white/70 transition-all" href="financials.html">
+<span class="material-icons-round">payments</span>
+<span class="font-medium">البيانات المالية</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-xl text-white/70 transition-all" href="contracts.html">
+<span class="material-icons-round">description</span>
+<span class="font-medium">إدارة العقود</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-xl text-white/70 transition-all" href="brokers.html">
+<span class="material-icons-round">handshake</span>
+<span class="font-medium">إدارة الوسطاء</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-xl text-white/70 transition-all" href="employees.html">
+<span class="material-icons-round">badge</span>
+<span class="font-medium">إدارة الموظفين</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-xl text-white/70 transition-all" href="knowledge-base.html">
+<span class="material-icons-round">menu_book</span>
+<span class="font-medium">مكتبة المعرفة</span>
+</a>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-xl text-white/70 transition-all" href="reports.html">
+<span class="material-icons-round">analytics</span>
+<span class="font-medium">التقارير</span>
+</a>
 </nav>
-</aside>
-<main class="flex-1 p-8">
-<header class="flex justify-between items-center mb-10">
-<h1 class="text-2xl font-black text-slate-800">مرحباً بك في نظام الإدارة</h1>
-<div class="flex items-center gap-4">
-<span class="material-icons-round text-slate-400 p-2 bg-white rounded-full border border-slate-100 cursor-pointer">notifications</span>
-<div class="flex items-center gap-3 bg-white p-2 pr-4 rounded-full border border-slate-100">
-<span class="text-sm font-bold text-slate-700">المسؤول الرئيسي</span>
-<div class="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold">M</div>
+<div class="p-4 border-t border-white/10">
+<button class="flex items-center gap-3 px-4 py-3 w-full text-red-400 hover:bg-red-400/10 rounded-xl transition-all" onclick="window.location.href='login.html'">
+<span class="material-icons-round">logout</span>
+<span class="font-medium">تسجيل الخروج</span>
+</button>
 </div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 mr-64">
+<!-- Top Bar -->
+<header class="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-8 sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<div class="bg-blue-50 p-2 rounded-full text-blue-600">
+<span class="material-icons-round">notifications</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-slate-800">مرحباً بك، أحمد العتيبي</h2>
+<p class="text-sm text-slate-500">مدير النظام (Admin)</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<input class="bg-slate-100 border-none rounded-full py-2 px-6 text-sm w-64 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="بحث عن عميل..." type="text"/>
+<span class="material-icons-round absolute left-3 top-2 text-slate-400">search</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold border-2 border-white shadow-sm">
+                    أ
+                </div>
 </div>
 </header>
+<!-- Dashboard Widgets -->
+<section class="p-8">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<!-- Stat Card 1 -->
 <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-<div class="text-slate-500 text-sm font-bold mb-2">إجمالي العملاء</div>
-<div class="text-3xl font-black text-slate-900">1,284</div>
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 bg-blue-50 text-blue-600 rounded-2xl">
+<span class="material-icons-round">groups</span>
 </div>
+<span class="text-xs font-bold text-green-500 bg-green-50 px-2 py-1 rounded-full">+12%</span>
+</div>
+<h3 class="text-slate-500 text-sm font-medium mb-1">إجمالي العملاء</h3>
+<div class="text-3xl font-bold text-slate-800">1,284</div>
+</div>
+<!-- Stat Card 2 -->
 <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-<div class="text-slate-500 text-sm font-bold mb-2">الطلبات النشطة</div>
-<div class="text-3xl font-black text-slate-900">312</div>
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 bg-amber-50 text-accent rounded-2xl">
+<span class="material-icons-round">pending_actions</span>
 </div>
+<span class="text-xs font-bold text-amber-500 bg-amber-50 px-2 py-1 rounded-full">نشط الآن</span>
+</div>
+<h3 class="text-slate-500 text-sm font-medium mb-1">الطلبات النشطة</h3>
+<div class="text-3xl font-bold text-slate-800">312</div>
+</div>
+<!-- Stat Card 3 -->
 <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-<div class="text-slate-500 text-sm font-bold mb-2">إجمالي العمولات</div>
-<div class="text-3xl font-black text-blue-600">45,920 ر.س</div>
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 bg-green-50 text-green-600 rounded-2xl">
+<span class="material-icons-round">account_balance_wallet</span>
 </div>
 </div>
+<h3 class="text-slate-500 text-sm font-medium mb-1">إجمالي العمولات</h3>
+<div class="text-3xl font-bold text-slate-800">45,920 <span class="text-sm font-normal text-slate-400">ر.س</span></div>
+</div>
+</div>
+<!-- Recent Activity Table -->
+<div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-50 flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-800">آخر طلبات العملاء</h3>
+<button class="text-blue-600 text-sm font-bold hover:underline" onclick="window.location.href='clients.html'">عرض الكل</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-slate-50 text-slate-500 text-sm">
+<th class="px-6 py-4 font-bold">اسم العميل</th>
+<th class="px-6 py-4 font-bold">نوع الطلب</th>
+<th class="px-6 py-4 font-bold">الحالة</th>
+<th class="px-6 py-4 font-bold">التاريخ</th>
+<th class="px-6 py-4 font-bold">الإجراء</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50 text-slate-700">
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4">خالد عبدالله سعد العمري</td>
+<td class="px-6 py-4">بناء ذاتي</td>
+<td class="px-6 py-4"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">تم التنفيذ</span></td>
+<td class="px-6 py-4">2024/12/28</td>
+<td class="px-6 py-4"><button class="text-blue-500 hover:text-blue-700"><span class="material-icons-round">visibility</span></button></td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4">عبدالرحمن محمد الشهري</td>
+<td class="px-6 py-4">وحدة جاهزة</td>
+<td class="px-6 py-4"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">تحت الدراسة</span></td>
+<td class="px-6 py-4">2024/12/27</td>
+<td class="px-6 py-4"><button class="text-blue-500 hover:text-blue-700"><span class="material-icons-round">visibility</span></button></td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4">سميرة هزاع الشهري</td>
+<td class="px-6 py-4">شراء مديونية</td>
+<td class="px-6 py-4"><span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold">انتظار موافقة</span></td>
+<td class="px-6 py-4">2024/12/26</td>
+<td class="px-6 py-4"><button class="text-blue-500 hover:text-blue-700"><span class="material-icons-round">visibility</span></button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 </main>
-</div>
+<!-- Google Sheets Sync Script -->
+<script type="module">
+        import CONFIG from './config.js';
+        console.log('System initialized for:', CONFIG.SYSTEM_NAME);
+        // التفاعل مع بيانات Google Sheets يتم استدعاؤه هنا لعرض الإحصائيات الحقيقية
+    </script>
 </body>
 </html>
