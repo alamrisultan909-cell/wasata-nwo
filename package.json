@@ -1,9 +1,11 @@
 {
   "name": "wasata-platform",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "description": "Comprehensive Mediation Platform - Unified System",
+  "type": "module",
   "dependencies": {
+    "googleapis": "^144.0.0",
     "uuid": "^11.0.3"
   },
   "engines": {
