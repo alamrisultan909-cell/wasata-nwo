@@ -1,145 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التميز التشغيلي - مكتبة المعرفة</title>
+    <title>كتاب: التميز التشغيلي في بيئة الوساطة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        body { font-family: 'IBM Plex Sans Arabic', sans-serif; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#004a99',
+                        secondary: '#1e293b',
+                        accent: '#f59e0b',
+                        surface: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50">
-
-    <div class="min-h-screen flex">
-        <!-- Vertical Progress Nav -->
-        <nav class="w-20 bg-white border-l border-gray-200 flex flex-col items-center py-8 gap-8">
-            <a href="index.html" class="w-12 h-12 rounded-xl bg-blue-50 text-[#004a99] flex items-center justify-center">
-                <span class="material-icons">home</span>
+<body class="bg-slate-50 font-sans text-slate-800">
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 text-primary font-bold text-sm">
+                <a href="/knowledge-base" class="hover:underline">المكتبة التعليمية</a>
+                <span>/</span>
+                <span class="text-slate-400">الوحدة الرابعة</span>
+            </div>
+            <a href="/app" class="p-2 bg-slate-100 rounded-lg text-secondary hover:bg-slate-200 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
             </a>
-            <div class="h-px w-8 bg-gray-100"></div>
-            <div class="flex flex-col gap-4">
-                <div class="w-10 h-10 rounded-full bg-[#004a99] text-white flex items-center justify-center text-xs font-bold">1</div>
-                <div class="w-10 h-10 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs font-bold">2</div>
-                <div class="w-10 h-10 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-xs font-bold">3</div>
-            </div>
-        </nav>
+        </div>
+    </header>
 
-        <!-- Main Content -->
-        <main class="flex-1 p-8 lg:p-16 max-w-5xl">
-            <div class="mb-12">
-                <span class="text-[#004a99] font-bold text-sm uppercase tracking-widest mb-2 block">الوحدة الرابعة</span>
-                <h1 class="text-4xl font-black mb-4">مسار التميز التشغيلي في بيئة الوساطة</h1>
-                <p class="text-gray-500 text-lg">دليل شامل لإتقان الأدوات الرقمية وإجراءات العمل المؤسسي لضمان أعلى مستويات الكفاءة والاحترافية.</p>
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        <div class="mb-12 text-center">
+            <h1 class="text-4xl font-extrabold text-secondary mb-4">مسار التميز التشغيلي في بيئة الوساطة</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed">دليل شامل لإتقان الأدوات الرقمية وإجراءات العمل المؤسسي لضمان أعلى مستويات الكفاءة والاحترافية.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- المؤشر الجانبي -->
+            <div class="md:col-span-1 hidden md:block">
+                <div class="sticky top-24 space-y-6">
+                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg shadow-primary/30">1</div>
+                    <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-400 flex items-center justify-center font-bold">2</div>
+                    <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-400 flex items-center justify-center font-bold">3</div>
+                </div>
             </div>
 
-            <div class="space-y-12">
-                
-                <!-- Section 1 -->
-                <section>
-                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                        <span class="material-icons text-blue-500">group</span>
-                        1. إتقان نظام إدارة العملاء (CRM Mastery)
-                    </h2>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 space-y-6">
-                        <p class="text-gray-600">يعد نظام إدارة علاقات العملاء (CRM) القلب النابض لعملياتنا التشغيلية. في هذا الجزء، سنتعلم كيفية تحويل البيانات الخام إلى علاقات مثمرة ومستدامة.</p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div class="p-6 bg-gray-50 rounded-2xl">
-                                <div class="font-bold mb-2">إضافة عميل</div>
-                                <p class="text-xs text-gray-500">التأكد من صحة رقم الهوية الوطنية وإرفاق المستندات التعريفية الأولية.</p>
-                            </div>
-                            <div class="p-6 bg-gray-50 rounded-2xl">
-                                <div class="font-bold mb-2">تحديث الحالات</div>
-                                <p class="text-xs text-gray-500">استخدام القائمة المنسدلة لنقل العميل من "قيد الدراسة" إلى "نشط".</p>
-                            </div>
-                            <div class="p-6 bg-gray-50 rounded-2xl">
-                                <div class="font-bold mb-2">إدارة الصلاحيات</div>
-                                <p class="text-xs text-gray-500">تخصيص الوصول للمساعدين أو الشركاء بناءً على دورهم الوظيفي.</p>
-                            </div>
+            <div class="md:col-span-11 space-y-12">
+                <!-- الوحدة 1 -->
+                <section class="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 md:p-12">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="p-3 bg-blue-50 text-primary rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </span>
+                        <h2 class="text-3xl font-bold text-secondary">1. إتقان نظام إدارة العملاء (CRM Mastery)</h2>
+                    </div>
+                    <p class="text-slate-500 leading-relaxed mb-10 border-b border-slate-100 pb-8">يعد نظام إدارة علاقات العملاء (CRM) القلب النابض لعملياتنا التشغيلية. في هذا الجزء، سنتعلم كيفية تحويل البيانات الخام إلى علاقات مثمرة ومستدامة.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+                            <h4 class="font-bold text-secondary mb-3 group-hover:text-primary">إضافة عميل</h4>
+                            <p class="text-xs text-slate-400">التأكد من صحة رقم الهوية الوطنية وإرفاق المستندات التعريفية الأولية.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+                            <h4 class="font-bold text-secondary mb-3 group-hover:text-primary">تحديث الحالات</h4>
+                            <p class="text-xs text-slate-400">استخدام القائمة المنسدلة لنقل العميل من "قيد الدراسة" إلى "نشط".</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+                            <h4 class="font-bold text-secondary mb-3 group-hover:text-primary">إدارة الصلاحيات</h4>
+                            <p class="text-xs text-slate-400">تخصيص الوصول للمساعدين أو الشركاء بناءً على دورهم الوظيفي.</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Section 2 -->
-                <section>
-                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                        <span class="material-icons text-purple-500">bolt</span>
-                        2. أتمتة سير العمل (Workflow Automation)
-                    </h2>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                        <div class="flex flex-col md:flex-row gap-8">
-                            <div class="flex-1">
-                                <h4 class="font-bold mb-4">التذكيرات التلقائية الذكية</h4>
-                                <p class="text-sm text-gray-600 mb-6">يرسل النظام تنبيهات للمواعيد قبل 24 ساعة عبر البريد الإلكتروني و SMS لضمان عدم فوات أي صفقة.</p>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center gap-2 text-sm text-gray-500">
-                                        <span class="material-icons text-green-500 text-sm">check</span>
-                                        تأكيد الحضور التلقائي
-                                    </li>
-                                    <li class="flex items-center gap-2 text-sm text-gray-500">
-                                        <span class="material-icons text-green-500 text-sm">check</span>
-                                        إعادة جدولة المواعيد الفورية
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="flex-1 bg-purple-50 rounded-2xl p-6 flex items-center justify-center">
-                                <span class="material-icons text-6xl text-purple-200">auto_awesome</span>
-                            </div>
+                <!-- الوحدة 2 -->
+                <section class="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 md:p-12">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="p-3 bg-purple-50 text-purple-600 rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </span>
+                        <h2 class="text-3xl font-bold text-secondary">2. أتمتة سير العمل (Workflow Automation)</h2>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-10 items-center">
+                        <div class="w-full md:w-1/2">
+                            <h4 class="font-bold text-secondary mb-4 text-xl">التذكيرات التلقائية الذكية</h4>
+                            <p class="text-slate-500 leading-relaxed mb-6">يرسل النظام تنبيهات للمواعيد قبل 24 ساعة عبر البريد الإلكتروني و SMS لضمان عدم فوات أي صفقة.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-sm text-slate-600">
+                                    <svg class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    تأكيد الحضور التلقائي
+                                </li>
+                                <li class="flex items-center gap-3 text-sm text-slate-600">
+                                    <svg class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    إعادة جدولة المواعيد الفورية
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2 aspect-video bg-slate-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                             <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-purple-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-12 0 9 9 0 0112 0z" /></svg>
                         </div>
                     </div>
                 </section>
 
-                <!-- Section 3 -->
-                <section>
-                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                        <span class="material-icons text-orange-500">description</span>
-                        3. إدارة العقود والأرشفة (Document Management)
-                    </h2>
-                    <div class="bg-[#002d72] text-white p-8 rounded-3xl">
-                        <div class="flex justify-between items-start mb-8">
+                <!-- الوحدة 3 -->
+                <section class="bg-primary text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="p-3 bg-white/10 text-accent rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                            </span>
+                            <h2 class="text-3xl font-bold">3. إدارة العقود والأرشفة (Document Management)</h2>
+                        </div>
+                        <div class="mb-10">
+                            <h4 class="text-accent font-bold mb-2">توليد العقود PDF</h4>
+                            <p class="text-blue-100 text-sm">تحويل المسودات إلى وثائق PDF غير قابلة للتعديل مع إضافة العلامة المائية للشركة.</p>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center border-t border-white/10 pt-10">
                             <div>
-                                <h4 class="text-xl font-bold mb-2">توليد العقود PDF</h4>
-                                <p class="text-blue-200 text-sm">تحويل المسودات إلى وثائق PDF غير قابلة للتعديل مع إضافة العلامة المائية للشركة.</p>
+                                <p class="text-xs text-blue-300 uppercase tracking-widest mb-2">نوع الوثيقة</p>
+                                <p class="font-bold">اتفاقيات سرية (NDA)</p>
                             </div>
-                            <span class="material-icons text-4xl opacity-50">picture_as_pdf</span>
-                        </div>
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-right text-sm">
-                                <thead>
-                                    <tr class="text-blue-300 border-b border-blue-800">
-                                        <th class="pb-4">نوع الوثيقة</th>
-                                        <th class="pb-4">بروتوكول الأرشفة</th>
-                                        <th class="pb-4">مدة الاحتفاظ</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-white">
-                                    <tr class="border-b border-blue-800">
-                                        <td class="py-4">اتفاقيات سرية (NDA)</td>
-                                        <td class="py-4">تشفير AES-256 تلقائي</td>
-                                        <td class="py-4">10 سنوات</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-4">عقود التسوية النهائية</td>
-                                        <td class="py-4">نسخة احتياطية مشفرة متعددة المواقع</td>
-                                        <td class="py-4">دائم</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div>
+                                <p class="text-xs text-blue-300 uppercase tracking-widest mb-2">بروتوكول الأرشفة</p>
+                                <p class="font-bold">تشفير AES-256 تلقائي</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-blue-300 uppercase tracking-widest mb-2">مدة الاحتفاظ</p>
+                                <p class="font-bold">10 سنوات</p>
+                            </div>
                         </div>
                     </div>
+                    <!-- زينة خلفية -->
+                    <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
                 </section>
             </div>
+        </div>
 
-            <footer class="mt-16 flex justify-between">
-                <a href="financial-logic.html" class="px-8 py-3 bg-white border border-gray-200 text-gray-600 rounded-xl hover:bg-gray-50 transition-all font-bold">الدرس السابق</a>
-                <a href="marketing-strategies.html" class="px-8 py-3 bg-[#004a99] text-white rounded-xl hover:shadow-lg transition-all font-bold">الدرس التالي</a>
-            </footer>
-        </main>
-    </div>
-
+        <!-- أزرار التنقل -->
+        <div class="mt-16 flex justify-between items-center gap-4">
+            <button onclick="window.location.href='/knowledge-base/financial-logic.html'" class="flex-1 py-4 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-50 transition-colors">الدرس السابق</button>
+            <button onclick="window.location.href='/knowledge-base/marketing-strategies.html'" class="flex-1 py-4 bg-primary text-white rounded-2xl font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all">الدرس التالي</button>
+        </div>
+    </main>
 </body>
 </html>
