@@ -3,11 +3,11 @@
   "cleanUrls": true,
   "routes": [
     { "src": "^/api/(.*)$", "dest": "/api/$1" },
+    { "src": "^/$", "dest": "/public-site/index.html" },
     { "src": "^/app$", "dest": "/crm-system/dashboard.html" },
     { "src": "^/app/(.*)$", "dest": "/crm-system/$1" },
     { "src": "^/knowledge-base$", "dest": "/knowledge-base/index.html" },
     { "src": "^/knowledge-base/(.*)$", "dest": "/knowledge-base/$1" },
-    { "src": "^/$", "dest": "/public-site/index.html" },
     { "src": "^/(.*)$", "dest": "/public-site/$1" }
   ]
 }
