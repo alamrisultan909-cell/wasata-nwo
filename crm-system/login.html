@@ -1,19 +1,30 @@
-<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
 <meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="صفحة تسجيل الدخول إلى نظام المنصة الشاملة للوساطة مع تحسينات وصول أساسية للحقول والنماذج.">
 <title>تسجيل الدخول - المنصة الشاملة للوساطة</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&amp;display=swap" rel="stylesheet">
-<style>body { font-family: 'IBM Plex Sans Arabic', sans-serif; }</style>
+<link rel="stylesheet" href="/shared/site-base.css">
 </head>
-<body class="bg-slate-100 flex items-center justify-center min-h-screen">
-<div class="bg-white p-10 rounded-3xl shadow-xl w-full max-w-md text-center">
-<img class="h-20 mx-auto mb-6" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
-<h2 class="text-2xl font-bold text-slate-800 mb-8">تسجيل الدخول للنظام</h2>
+<body class="bg-slate-100 flex items-center justify-center min-h-screen p-6">
+<a href="#main-content" class="skip-link">تجاوز إلى المحتوى</a>
+<main id="main-content" class="bg-white p-8 md:p-10 rounded-3xl shadow-xl w-full max-w-md text-center">
+<img alt="شعار المنصة الشاملة للوساطة" class="h-20 mx-auto mb-6" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<h1 class="text-2xl font-bold text-slate-800 mb-8">تسجيل الدخول للنظام</h1>
 <form class="space-y-4">
-<input class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-600" placeholder="البريد الإلكتروني" type="email">
-<input class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-600" placeholder="كلمة المرور" type="password">
-<button class="w-full bg-blue-700 text-white p-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition-all" onclick="window.location.href='/app'" type="button">دخول مباشر</button>
-</form>
+<div class="text-right">
+    <label class="block text-sm font-bold text-slate-700 mb-2" for="email">البريد الإلكتروني</label>
+    <input id="email" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-600" placeholder="name@example.com" type="email" autocomplete="email">
 </div>
+<div class="text-right">
+    <label class="block text-sm font-bold text-slate-700 mb-2" for="password">كلمة المرور</label>
+    <input id="password" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-blue-600" placeholder="••••••••" type="password" autocomplete="current-password">
+</div>
+<button class="w-full bg-blue-700 text-white p-4 rounded-xl font-bold text-lg hover:bg-blue-800" onclick="window.location.href='/app'" type="button">دخول مباشر</button>
+</form>
+</main>
 
 </body></html>

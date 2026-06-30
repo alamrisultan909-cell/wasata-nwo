@@ -1,0 +1,89 @@
+:root {
+    color-scheme: light;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(0, 74, 153, 0.28);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    transform: translateY(-220%);
+    background: #004a99;
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .crm-responsive-layout {
+        display: block;
+    }
+
+    .crm-responsive-layout > .crm-sidebar {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .crm-responsive-main {
+        margin-right: 0 !important;
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

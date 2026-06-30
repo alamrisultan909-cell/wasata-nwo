@@ -3,116 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="وحدة تعليمية عن المنطق والتحليل المالي للوساطة تشمل التقييم العقاري والقدرة الائتمانية وحساب العمولات.">
     <title>كتاب: المنطق والتحليل المالي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#004a99',
-                        secondary: '#1e293b',
-                        accent: '#f59e0b',
-                        surface: '#f8fafc',
-                    },
-                    fontFamily: {
-                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="/shared/site-base.css">
+    <script src="/shared/knowledge-base-theme.js"></script>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800">
+    <a href="#main-content" class="skip-link">تجاوز إلى المحتوى</a>
+
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="/knowledge-base" class="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-bold text-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+            <a href="/knowledge-base" class="flex items-center gap-2 text-primary hover:text-primary/80 font-bold text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
                 العودة للمكتبة
             </a>
-            <img src="https://raw.githubusercontent.com/alamrisultan909-cell/wasata-nwo/main/logo.png" alt="Logo" class="h-10">
+            <img src="https://raw.githubusercontent.com/alamrisultan909-cell/wasata-nwo/main/logo.png" alt="شعار المنصة الشاملة للوساطة" class="h-10">
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
+    <main id="main-content" class="max-w-4xl mx-auto px-6 py-12">
         <div class="text-center mb-16">
             <h1 class="text-4xl font-extrabold text-secondary mb-4 leading-tight">كتاب: المنطق والتحليل المالي</h1>
             <p class="text-lg text-slate-500 leading-relaxed">دليل شامل لتعميق الفهم بالمنطق الاستثماري والقدرة على تفكيك البيانات المالية في سياق الوساطة العقارية والتمويل المؤسسي.</p>
         </div>
 
         <div class="space-y-12">
-            <section class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+            <section class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden" aria-labelledby="valuation-title">
                 <div class="flex items-center gap-4 mb-8">
                     <span class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">01</span>
-                    <h2 class="text-2xl font-bold text-secondary">أساسيات التقييم العقاري</h2>
+                    <h2 id="valuation-title" class="text-2xl font-bold text-secondary">أساسيات التقييم العقاري</h2>
                 </div>
-                <p class="text-slate-600 leading-relaxed text-lg mb-8">
-                    يعتبر التقييم العقاري حجر الزاوية في التحليل المالي للمشاريع. تتنوع طرق التقييم لتشمل طريقة التكلفة، وطريقة مقارنة المبيعات، وطريقة دخل العقار.
-                </p>
+                <p class="text-slate-600 leading-relaxed text-lg mb-8">يعتبر التقييم العقاري حجر الزاوية في التحليل المالي للمشاريع. تتنوع طرق التقييم لتشمل طريقة التكلفة، وطريقة مقارنة المبيعات، وطريقة دخل العقار.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                        <h4 class="font-bold text-primary mb-2">معايير السوق</h4>
+                        <h3 class="font-bold text-primary mb-2">معايير السوق</h3>
                         <p class="text-sm text-slate-500">تتأثر المعايير بالعرض والطلب، والموقع الجغرافي، والتوقعات الاقتصادية الكلية.</p>
                     </div>
                     <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                        <h4 class="font-bold text-primary mb-2">طرق التقييم</h4>
+                        <h3 class="font-bold text-primary mb-2">طرق التقييم</h3>
                         <p class="text-sm text-slate-500">نركز هنا على أسلوب المقارنة المباشرة مع عقارات مشابهة تم بيعها حديثاً.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm">
+            <section class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm" aria-labelledby="credit-title">
                 <div class="flex items-center gap-4 mb-8">
                     <span class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">02</span>
-                    <h2 class="text-2xl font-bold text-secondary">تحليل القدرة الائتمانية</h2>
+                    <h2 id="credit-title" class="text-2xl font-bold text-secondary">تحليل القدرة الائتمانية</h2>
                 </div>
-                <p class="text-slate-600 leading-relaxed text-lg mb-8">
-                    إن فهم الجدارة الائتمانية للعميل يتجاوز مجرد النظر إلى الأرقام؛ إنه تحليل للسلوك المالي والالتزام بالتدفقات النقدية المستقرة.
-                </p>
+                <p class="text-slate-600 leading-relaxed text-lg mb-8">إن فهم الجدارة الائتمانية للعميل يتجاوز مجرد النظر إلى الأرقام؛ إنه تحليل للسلوك المالي والالتزام بالتدفقات النقدية المستقرة.</p>
                 <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                    <h4 class="font-bold text-secondary mb-4 text-center">نسب الاستقطاع (DSR)</h4>
-                    <p class="text-center text-sm text-slate-500 leading-relaxed">
-                        تحدد مؤسسة النقد العربي السعودي نسباً محددة للاستقطاع لا يجوز تجاوزها، لضمان عدم إرهاق كاهل المستفيد مالياً.
-                    </p>
+                    <h3 class="font-bold text-secondary mb-4 text-center">نسب الاستقطاع (DSR)</h3>
+                    <p class="text-center text-sm text-slate-500 leading-relaxed">تحدد مؤسسة النقد العربي السعودي نسباً محددة للاستقطاع لا يجوز تجاوزها، لضمان عدم إرهاق كاهل المستفيد مالياً.</p>
                 </div>
             </section>
 
-            <section class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm">
+            <section class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm" aria-labelledby="commissions-title">
                 <div class="flex items-center gap-4 mb-8">
                     <span class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">03</span>
-                    <h2 class="text-2xl font-bold text-secondary">حساب العمولات والأرباح</h2>
+                    <h2 id="commissions-title" class="text-2xl font-bold text-secondary">حساب العمولات والأرباح</h2>
                 </div>
-                <p class="text-slate-600 leading-relaxed text-lg mb-8">
-                    يتطلب توزيع النسب مهارة دقيقة في تطبيق الصيغ الحسابية المعقدة التي تضمن حقوق جميع الأطراف في الصفقة المالية.
-                </p>
-                <table class="w-full text-right border-collapse rounded-xl overflow-hidden shadow-sm">
-                    <thead class="bg-slate-100 text-secondary text-sm">
-                        <tr>
-                            <th class="p-4 border-b border-slate-200">الطرف</th>
-                            <th class="p-4 border-b border-slate-200 text-center">النسبة المئوية</th>
-                            <th class="p-4 border-b border-slate-200">نوع العمولة</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-600 text-sm">
-                        <tr>
-                            <td class="p-4 border-b border-slate-100">الوسيط الأساسي</td>
-                            <td class="p-4 border-b border-slate-100 text-center font-bold">2.5%</td>
-                            <td class="p-4 border-b border-slate-100">إتمام صفقة</td>
-                        </tr>
-                        <tr>
-                            <td class="p-4">المسوق الفرعي</td>
-                            <td class="p-4 text-center font-bold">0.5%</td>
-                            <td class="p-4">جلب عميل</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <p class="text-slate-600 leading-relaxed text-lg mb-8">يتطلب توزيع النسب مهارة دقيقة في تطبيق الصيغ الحسابية المعقدة التي تضمن حقوق جميع الأطراف في الصفقة المالية.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-right border-collapse rounded-xl overflow-hidden shadow-sm">
+                        <caption class="sr-only">جدول يوضح نسب العمولات حسب دور كل طرف في الصفقة</caption>
+                        <thead class="bg-slate-100 text-secondary text-sm">
+                            <tr>
+                                <th class="p-4 border-b border-slate-200">الطرف</th>
+                                <th class="p-4 border-b border-slate-200 text-center">النسبة المئوية</th>
+                                <th class="p-4 border-b border-slate-200">نوع العمولة</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-600 text-sm">
+                            <tr>
+                                <td class="p-4 border-b border-slate-100">الوسيط الأساسي</td>
+                                <td class="p-4 border-b border-slate-100 text-center font-bold">2.5%</td>
+                                <td class="p-4 border-b border-slate-100">إتمام صفقة</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4">المسوق الفرعي</td>
+                                <td class="p-4 text-center font-bold">0.5%</td>
+                                <td class="p-4">جلب عميل</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </div>
 
-        <div class="mt-12 flex justify-center">
-            <button onclick="window.location.href='/knowledge-base/operational-excellence.html'" class="px-12 py-4 bg-primary text-white rounded-xl font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-transform">حفظ والتقدم للاختبار</button>
-        </div>
+        <nav aria-label="التنقل بين الدروس" class="mt-12 flex flex-col sm:flex-row justify-center sm:justify-between gap-4">
+            <a href="/knowledge-base/professional-mediation.html" class="text-center px-8 py-3 bg-white border border-slate-200 text-slate-600 rounded-xl font-bold hover:bg-slate-50">الدرس السابق</a>
+            <a href="/knowledge-base/operational-excellence.html" class="text-center px-12 py-4 bg-primary text-white rounded-xl font-bold shadow-xl shadow-primary/20 hover:scale-[1.01]">حفظ والتقدم للاختبار</a>
+        </nav>
     </main>
 </body>
 </html>

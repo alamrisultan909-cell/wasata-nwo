@@ -1,10 +1,14 @@
-<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="لوحة تحكم المنصة الشاملة للوساطة لعرض الوصول السريع إلى إدارة العملاء والوسطاء والماليات ومكتبة المعرفة.">
 <title>لوحة التحكم - المنصة الشاملة للوساطة</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="/shared/site-base.css">
 <script>
         tailwind.config = {
             theme: {
@@ -23,73 +27,92 @@
         }
     </script>
 <style>
-        body { font-family: 'IBM Plex Sans Arabic', sans-serif; background-color: #f8fafc; }
+        body { background-color: #f8fafc; }
         .sidebar-item:hover { background-color: rgba(255,255,255,0.1); }
         .active-nav { background-color: #004a99 !important; color: white !important; font-weight: bold; border-radius: 0.75rem; }
         .stat-card { transition: transform 0.2s ease-in-out; }
         .stat-card:hover { transform: translateY(-4px); }
     </style>
 </head>
-<body class="flex min-h-screen">
-<!-- القائمة الجانبية (Sidebar) -->
-<aside class="w-64 bg-primary text-white flex flex-col fixed inset-y-0 right-0 z-50">
+<body class="crm-responsive-layout flex min-h-screen">
+<a href="#main-content" class="skip-link">تجاوز إلى المحتوى</a>
+<aside class="crm-sidebar w-64 bg-primary text-white flex flex-col fixed inset-y-0 right-0 z-50">
 <div class="p-6 flex items-center gap-3">
-<img alt="Logo" class="h-10 w-10 object-contain bg-white rounded-md p-1" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<img alt="شعار المنصة" class="h-10 w-10 object-contain bg-white rounded-md p-1" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
 <div>
 <h1 class="font-bold text-lg leading-tight">الوساطة الشاملة</h1>
 <p class="text-xs opacity-70">نظام الإدارة المتكامل</p>
 </div>
 </div>
-<nav class="flex-1 px-4 space-y-2 mt-4">
+<nav aria-label="أقسام النظام" class="flex-1 px-4 space-y-2 mt-4">
 <a class="active-nav flex items-center gap-3 px-4 py-3 text-sm" href="/app">
-<span class="material-icons-outlined text-xl">dashboard</span>
+<span class="material-icons-outlined text-xl" aria-hidden="true">dashboard</span>
                 لوحة التحكم
             </a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white transition-all" href="/app/clients.html">
-<span class="material-icons-outlined text-xl">groups</span>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white" href="/app/clients.html">
+<span class="material-icons-outlined text-xl" aria-hidden="true">groups</span>
                 متابعة العملاء
             </a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white transition-all" href="/app/brokers.html">
-<span class="material-icons-outlined text-xl">handshake</span>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white" href="/app/brokers.html">
+<span class="material-icons-outlined text-xl" aria-hidden="true">handshake</span>
                 إدارة الوسطاء
             </a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white transition-all" href="/app/financials.html">
-<span class="material-icons-outlined text-xl">payments</span>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white" href="/app/financials.html">
+<span class="material-icons-outlined text-xl" aria-hidden="true">payments</span>
                 السجلات المالية
             </a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white transition-all" href="/app/contracts.html">
-<span class="material-icons-outlined text-xl">description</span>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white" href="/app/contracts.html">
+<span class="material-icons-outlined text-xl" aria-hidden="true">description</span>
                 إدارة العقود
             </a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white transition-all" href="/app/employees.html">
-<span class="material-icons-outlined text-xl">badge</span>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white" href="/app/employees.html">
+<span class="material-icons-outlined text-xl" aria-hidden="true">badge</span>
                 إدارة الموظفين
             </a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white transition-all mt-8 border-t border-white/10 pt-4" href="/knowledge-base">
-<span class="material-icons-outlined text-xl">library_books</span>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white mt-8 border-t border-white/10 pt-4" href="/knowledge-base">
+<span class="material-icons-outlined text-xl" aria-hidden="true">library_books</span>
                 مكتبة المعرفة
             </a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white transition-all" href="/app/reports.html">
-<span class="material-icons-outlined text-xl">analytics</span>
+<a class="sidebar-item flex items-center gap-3 px-4 py-3 text-sm text-slate-300 hover:text-white" href="/app/reports.html">
+<span class="material-icons-outlined text-xl" aria-hidden="true">analytics</span>
                 التقارير
             </a>
 </nav>
 </aside>
-<main class="flex-1 mr-64">
-<header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 sticky top-0 z-40">
-<div class="flex items-center gap-4">
-<span class="text-slate-400 material-icons-outlined">search</span>
-<input class="bg-transparent outline-none text-sm w-64" placeholder="البحث..." type="text">
-</div>
-<div class="flex items-center gap-3">
-<img class="h-8 w-8 object-contain" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
-<span class="text-sm font-bold text-slate-800">المسؤول الرئيسي</span>
-</div>
+<main id="main-content" class="crm-responsive-main flex-1 mr-64">
+<header class="bg-white border-b border-slate-200 px-6 md:px-8 py-4 sticky top-0 z-40">
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-4 bg-slate-50 rounded-2xl px-4 py-3">
+            <span class="text-slate-400 material-icons-outlined" aria-hidden="true">search</span>
+            <label class="sr-only" for="dashboard-search">البحث داخل لوحة التحكم</label>
+            <input id="dashboard-search" class="bg-transparent outline-none text-sm w-full md:w-64" placeholder="البحث..." type="text">
+        </div>
+        <div class="flex items-center gap-3">
+            <img alt="صورة المسؤول الرئيسي" class="h-8 w-8 object-contain" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+            <span class="text-sm font-bold text-slate-800">المسؤول الرئيسي</span>
+        </div>
+    </div>
 </header>
-<div class="p-8 text-center">
-<h2 class="text-2xl font-bold text-slate-800">لوحة التحكم النشطة</h2>
-<p class="text-slate-500 mt-2">النظام مربوط ببيانات Google Sheets الحية.</p>
-</div>
+<section class="p-6 md:p-8">
+    <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-slate-800">لوحة التحكم النشطة</h2>
+        <p class="text-slate-500 mt-2">النظام مربوط ببيانات Google Sheets الحية.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <article class="stat-card bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+            <h3 class="font-bold text-slate-800 mb-2">الوصول السريع</h3>
+            <p class="text-sm text-slate-500">انتقل مباشرة إلى إدارة العملاء والوسطاء والملفات المالية.</p>
+        </article>
+        <article class="stat-card bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+            <h3 class="font-bold text-slate-800 mb-2">المعرفة الداخلية</h3>
+            <p class="text-sm text-slate-500">محتوى تعليمي منظم لدعم التشغيل وخدمة العملاء والتسويق.</p>
+        </article>
+        <article class="stat-card bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+            <h3 class="font-bold text-slate-800 mb-2">واجهة أوضح</h3>
+            <p class="text-sm text-slate-500">تحسينات استجابة ووصول أساسية مع الحفاظ على نفس الطابع البصري.</p>
+        </article>
+    </div>
+</section>
 </main>
 
 </body></html>
