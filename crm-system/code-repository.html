@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مستودع الكود | المنصة الشاملة للوساطة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .pulse-live {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .5; transform: scale(1.2); }
+        }
+        .file-tree-hover:hover {
+            background-color: #f1f5f9;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Tailwind Config Injection -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-tint": "#545f73",
+                "secondary-container": "#6cf8bb",
+                "tertiary-fixed-dim": "#adc6ff",
+                "surface-variant": "#e0e3e5",
+                "primary-fixed": "#d8e3fb",
+                "tertiary-container": "#00275b",
+                "surface": "#f7f9fb",
+                "on-secondary-container": "#00714d",
+                "on-surface-variant": "#45474c",
+                "on-primary-fixed": "#111c2d",
+                "error": "#ba1a1a",
+                "primary": "#091426",
+                "inverse-primary": "#bcc7de",
+                "primary-fixed-dim": "#bcc7de",
+                "on-primary-container": "#8590a6",
+                "on-error-container": "#93000a",
+                "secondary-fixed-dim": "#4edea3",
+                "surface-dim": "#d8dadc",
+                "primary-container": "#1e293b",
+                "on-surface": "#191c1e",
+                "on-tertiary-fixed": "#001a42",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#d8e2ff",
+                "tertiary": "#001334",
+                "on-tertiary-container": "#4c8dff",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "inverse-surface": "#2d3133",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed": "#002113",
+                "on-primary": "#ffffff",
+                "outline-variant": "#c5c6cd",
+                "on-primary-fixed-variant": "#3c475a",
+                "outline": "#75777d",
+                "surface-container-low": "#f2f4f6",
+                "surface-container": "#eceef0",
+                "surface-bright": "#f7f9fb",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed-variant": "#004395",
+                "on-error": "#ffffff",
+                "secondary": "#006c49",
+                "error-container": "#ffdad6",
+                "on-secondary-fixed-variant": "#005236",
+                "background": "#f7f9fb",
+                "inverse-on-surface": "#eff1f3",
+                "secondary-fixed": "#6ffbbe",
+                "on-background": "#191c1e"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "16px",
+                "xl": "32px",
+                "xs": "4px",
+                "md": "16px",
+                "lg": "24px",
+                "base": "4px",
+                "sm": "8px",
+                "container-max": "1440px"
+            }
+          }
+        }
+      }
+    </script>
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="bg-surface-container w-64 hidden lg:flex flex-col h-full p-md rtl border-l border-outline-variant">
+<div class="flex flex-col gap-sm mb-xl">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">mediation</span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm text-primary font-bold">بوابة الدخول</h1>
+<p class="text-xs text-on-surface-variant">المنصة الشاملة للوساطة</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-xs">
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-xl transition-all" href="dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">الرئيسية</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-xl transition-all" href="/public-site/index.html">
+<span class="material-symbols-outlined">language</span>
+<span class="font-label-md text-label-md">الموقع العام</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-xl transition-all" href="/knowledge-base/index.html">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">مركز التدريب</span>
+</a>
+<a class="flex items-center gap-sm p-sm bg-secondary-container text-on-secondary-container rounded-xl transition-all" href="code-repository.html">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-label-md text-label-md">مستودع الكود</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-xs border-t border-outline-variant pt-md">
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">الإعدادات</span>
+</a>
+<a class="flex items-center gap-sm p-sm text-error hover:bg-error-container hover:bg-opacity-10 rounded-xl" href="login.html">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface flex justify-between items-center w-full px-lg py-md border-b border-outline-variant">
+<div class="flex items-center gap-md">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">إدارة تسليم الكود البرمجي</h2>
+<div class="flex items-center gap-sm bg-secondary-container/20 px-sm py-xs rounded-full border border-secondary/20">
+<span class="w-2 h-2 bg-secondary rounded-full pulse-live"></span>
+<span class="text-secondary font-label-md text-label-md">الحالة: متصل ومزامن (Live &amp; Synced)</span>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-xs">
+<button class="p-sm text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<button class="p-sm text-on-surface-variant hover:bg-surface-container rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border border-white"></span>
+</button>
+</div>
+<button class="bg-primary text-white px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all">
+                        تحديث المستودع
+                    </button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-lg bg-surface-container-low">
+<!-- Instructions Alert -->
+<div class="bg-tertiary-container/10 border border-tertiary-container/30 p-md rounded-xl mb-lg flex gap-md">
+<span class="material-symbols-outlined text-on-tertiary-container">info</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-tertiary-container">تعليمات الدمج النهائي</h4>
+<p class="text-on-surface-variant mt-xs">لاستبدال الرموز النصية بالكود الفعلي، يرجى نسخ محتويات الملف من الأقسام أدناه ولصقها في البنية المقابلة في محرر الكود الخاص بك. تأكد من تطابق مسارات الملفات لضمان عمل المزامنة الآلية مع Vercel.</p>
+</div>
+</div>
+<!-- Repository Bento Grid -->
+<div class="grid grid-cols-12 gap-lg">
+<!-- Root Structure -->
+<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col" data-folder="root">
+<div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+<span class="font-headline-sm text-headline-sm font-bold">المجلد الرئيسي (Root)</span>
+</div>
+<button class="text-xs text-secondary font-bold hover:underline" onclick="copyAll('root')">نسخ الكل</button>
+</div>
+<div class="flex-1 p-sm space-y-xs">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="vercel.json">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-amber-500">settings_phone</span>
+<span class="font-data-mono text-data-mono">vercel.json</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity" data-action="copy" data-file="vercel.json">نسخ الكود</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="package.json">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-blue-500">data_object</span>
+<span class="font-data-mono text-data-mono">package.json</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity" data-action="copy" data-file="package.json">نسخ الكود</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="README.md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-slate-400">description</span>
+<span class="font-data-mono text-data-mono">README.md</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity" data-action="copy" data-file="README.md">نسخ الكود</button>
+</div>
+</div>
+</div>
+<!-- Public Site Folder -->
+<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm" data-folder="public-site">
+<div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">folder</span>
+<span class="font-headline-sm text-headline-sm font-bold">public-site</span>
+</div>
+<button class="text-xs text-secondary font-bold hover:underline" onclick="copyAll('public-site')">نسخ الكل</button>
+</div>
+<div class="flex-1 p-sm space-y-xs">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="index.html">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-orange-500">html</span>
+<span class="font-data-mono text-data-mono">index.html</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="public-site/index.html">نسخ الكود</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="globals.css">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-blue-400">css</span>
+<span class="font-data-mono text-data-mono">globals.css</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="public-site/globals.css">نسخ الكود</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="main.js">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-yellow-500">javascript</span>
+<span class="font-data-mono text-data-mono">main.js</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="public-site/main.js">نسخ الكود</button>
+</div>
+</div>
+</div>
+<!-- CRM System Folder -->
+<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm" data-folder="crm-system">
+<div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">folder</span>
+<span class="font-headline-sm text-headline-sm font-bold">crm-system</span>
+</div>
+<button class="text-xs text-secondary font-bold hover:underline" onclick="copyAll('crm-system')">نسخ الكل</button>
+</div>
+<div class="flex-1 p-sm space-y-xs">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="dashboard.tsx">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-blue-600">terminal</span>
+<span class="font-data-mono text-data-mono">dashboard.tsx</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="crm-system/dashboard.tsx">نسخ الكود</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="transactions.tsx">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-blue-600">terminal</span>
+<span class="font-data-mono text-data-mono">transactions.tsx</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="crm-system/transactions.tsx">نسخ الكود</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="api-routes.ts">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-purple-500">database</span>
+<span class="font-data-mono text-data-mono">api-routes.ts</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="crm-system/api-routes.ts">نسخ الكود</button>
+</div>
+</div>
+</div>
+<!-- Knowledge Base Folder -->
+<div class="col-span-12 lg:col-span-8 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm" data-folder="knowledge-base">
+<div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">folder_special</span>
+<span class="font-headline-sm text-headline-sm font-bold">knowledge-base</span>
+</div>
+<div class="flex gap-md">
+<span class="text-xs bg-surface-variant px-sm py-1 rounded-full text-on-surface-variant">4 ملفات</span>
+<button class="text-xs text-secondary font-bold hover:underline" onclick="copyAll('knowledge-base')">تحميل المجلد كاملاً</button>
+</div>
+</div>
+<div class="flex-1 p-sm grid grid-cols-1 md:grid-cols-2 gap-x-lg">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="legal-framework.md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-slate-400">article</span>
+<span class="font-data-mono text-data-mono">legal-framework.md</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/legal-framework.md">نسخ</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="training-v1.md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-slate-400">article</span>
+<span class="font-data-mono text-data-mono">training-v1.md</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/training-v1.md">نسخ</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="faq-mediation.md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-slate-400">article</span>
+<span class="font-data-mono text-data-mono">faq-mediation.md</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/faq-mediation.md">نسخ</button>
+</div>
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="config.json">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-blue-500">schema</span>
+<span class="font-data-mono text-data-mono">config.json</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/config.json">نسخ</button>
+</div>
+</div>
+</div>
+<!-- Sync Status Widget -->
+<div class="col-span-12 lg:col-span-4 bg-primary text-white p-lg rounded-xl flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-sm text-headline-sm mb-xs">سجل المزامنة</h3>
+<p class="text-on-primary-container text-xs mb-lg">آخر مزامنة قبل دقيقتين</p>
+<div class="space-y-sm">
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">done</span>
+</div>
+<span class="text-sm">تحديث Vercel Deployment</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">done</span>
+</div>
+<span class="text-sm">مزامنة قاعدة البيانات (CRM)</span>
+</div>
+<div class="flex items-center gap-sm opacity-50">
+<div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">sync</span>
+</div>
+<span class="text-sm">ضغط الملفات الملحقة</span>
+</div>
+</div>
+</div>
+<!-- Background Pattern Decor -->
+<div class="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary opacity-20 rounded-full blur-2xl"></div>
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-tertiary-container opacity-30 rounded-full blur-xl"></div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-sm px-xl border-t border-outline-variant flex justify-between items-center">
+<div class="flex items-center gap-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 المنصة الشاملة للوساطة. جميع الحقوق محفوظة.</span>
+</div>
+<div class="flex gap-lg">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">سياسة الخصوصية</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">شروط الاستخدام</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">الدعم الفني</a>
+</div>
+</footer>
+</main>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+        function copyAll(folder) {
+            const files = [];
+            document.querySelectorAll('[data-folder="' + folder + '"] [data-file]').forEach(el => {
+                files.push(el.getAttribute('data-file'));
+            });
+            const text = files.length
+                ? folder + '/\n' + files.map(f => '  ' + f).join('\n')
+                : folder + '/';
+            navigator.clipboard.writeText(text).then(() => {
+                alert('تم نسخ محتويات مجلد ' + folder + ' إلى الحافظة بنجاح.');
+            }).catch(() => {
+                alert('تعذّر النسخ. يرجى المحاولة مرة أخرى.');
+            });
+        }
+
+        // Handle individual file copy button clicks using data attributes
+        document.querySelectorAll('button[data-action="copy"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const fileName = this.getAttribute('data-file') || this.closest('[data-file]')?.getAttribute('data-file') || '';
+                const originalText = this.innerText;
+                navigator.clipboard.writeText(fileName).then(() => {
+                    this.innerText = 'تم النسخ!';
+                    this.classList.replace('bg-primary', 'bg-secondary');
+                    setTimeout(() => {
+                        this.innerText = originalText;
+                        this.classList.replace('bg-secondary', 'bg-primary');
+                    }, 2000);
+                }).catch(() => {
+                    this.innerText = 'فشل النسخ';
+                    setTimeout(() => { this.innerText = originalText; }, 2000);
+                });
+            });
+        });
+    </script>
+</body></html>
