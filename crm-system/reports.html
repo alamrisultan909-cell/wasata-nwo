@@ -1,1 +1,264 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقارير والتحليلات - المنصة الشاملة للوساطة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#004a99',
+                        secondary: '#00c2ff',
+                        surface: '#f7f9fb',
+                        'on-surface': '#1a1c1e',
+                        'outline-variant': '#d8dadc'
+                    },
+                    fontFamily: {
+                        sans: ['IBM+Plex+Sans+Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; background-color: #f7f9fb; }
+        .report-card { transition: transform 0.2s; }
+        .report-card:hover { transform: translateY(-4px); }
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-64 h-16 bg-white border-b border-outline-variant flex items-center justify-between px-8 z-30 no-print">
+        <div class="flex items-center gap-4">
+            <h1 class="text-xl font-bold text-primary">التقارير والتحليلات</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <button onclick="window.print()" class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                <span class="material-icons-round">print</span>
+                <span>طباعة التقرير العام</span>
+            </button>
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw36oRWg8ABavedXipJWDAhBV9OAVoXr6mLVMJGOlviOY3Z8Z-jZxQR070N88PuowHjTueHefppShNoKqhMqipSRKCB0tqScfhgjguOIt1Eo00b53jzimugxki8w-jjmLZz8t846bQCYbNzDOgJqtV1SQlUkpC1sKTZnd131x6G1V1PCIgfhZh6WsQ2Xag4_C3TVzxtZh_6B2vHVEeufmB5f8ZiBz_KgyBLyeugM1nYq4MCOQvQ20okrmnmA55EotqoAo" alt="Logo" class="w-8 h-8 object-contain">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="fixed right-0 top-0 h-screen w-64 bg-primary text-white p-6 flex flex-col z-40 no-print">
+        <div class="mb-10 flex flex-col items-center">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWbdKgKVFiwnxj4lhUEICjncj_tGhUzFDAUPBGmx4AmmbEYzpMYLvO1_AqLrxFbctp8tOInf2en5d_NT39nL9XbEzGKF478IHUboB2MrXriTgLBnUun26nMeVQgSSNcsgH3tn-ilIlQANNVw1y8SE0jhFRkAtDmGmwFOrQXKj2kX-73vRJS6GEOL4xDbFxaXOJjpEuCv5q_tvzbWPGELp6KVP7JM4CREOIgiY2DhgTOsdCPQvy7GX-e7Sn6kveGMBVRZo" alt="Wasata Logo" class="w-24 mb-4 filter brightness-0 invert">
+            <p class="text-sm font-medium opacity-80 text-center">نظام إدارة العملاء</p>
+        </div>
+
+        <nav class="space-y-2 flex-grow">
+            <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 transition-all">
+                <span class="material-icons-round">dashboard</span>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="clients.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 transition-all">
+                <span class="material-icons-round">groups</span>
+                <span>متابعة العملاء</span>
+            </a>
+            <a href="brokers.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 transition-all">
+                <span class="material-icons-round">handshake</span>
+                <span>إدارة الوسطاء</span>
+            </a>
+            <a href="employees.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 transition-all">
+                <span class="material-icons-round">badge</span>
+                <span>الموظفين</span>
+            </a>
+            <a href="financials.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 transition-all">
+                <span class="material-icons-round">payments</span>
+                <span>البيانات المالية</span>
+            </a>
+            <a href="reports.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/20 font-bold border-r-4 border-secondary transition-all">
+                <span class="material-icons-round">analytics</span>
+                <span>التقارير</span>
+            </a>
+        </nav>
+
+        <div class="mt-auto border-t border-white/10 pt-4">
+            <a href="login.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-300 hover:bg-red-500/10 transition-all">
+                <span class="material-icons-round">logout</span>
+                <span>تسجيل الخروج</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="mr-64 pt-24 p-8">
+        
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm report-card">
+                <p class="text-sm text-gray-500 mb-1">إجمالي الصفقات المنفذة</p>
+                <h3 class="text-3xl font-bold text-primary">1,284</h3>
+                <div class="mt-2 flex items-center gap-1 text-green-500 text-xs">
+                    <span class="material-icons-round text-sm">trending_up</span>
+                    <span>12%+ منذ الشهر الماضي</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm report-card">
+                <p class="text-sm text-gray-500 mb-1">العمولات المحصلة</p>
+                <h3 class="text-3xl font-bold text-primary">45,920 <span class="text-sm font-normal">ر.س</span></h3>
+                <div class="mt-2 flex items-center gap-1 text-green-500 text-xs">
+                    <span class="material-icons-round text-sm">trending_up</span>
+                    <span>8.5%+ نمو</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm report-card">
+                <p class="text-sm text-gray-500 mb-1">طلبات قيد المراجعة</p>
+                <h3 class="text-3xl font-bold text-orange-500">312</h3>
+                <div class="mt-2 flex items-center gap-1 text-gray-400 text-xs">
+                    <span>تحتاج لمتابعة فورية</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm report-card">
+                <p class="text-sm text-gray-500 mb-1">كفاءة الوسطاء</p>
+                <h3 class="text-3xl font-bold text-primary">94%</h3>
+                <div class="mt-2 flex items-center gap-1 text-blue-500 text-xs">
+                    <span>معدل إغلاق مرتفع</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Reports Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Revenue Analysis -->
+            <div class="lg:col-span-2 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+                <div class="px-6 py-4 border-b border-outline-variant flex justify-between items-center bg-gray-50/50">
+                    <h2 class="font-bold text-lg">تحليل الإيرادات الشهري</h2>
+                    <select class="bg-white border border-outline-variant rounded-lg px-3 py-1 text-sm outline-none focus:ring-2 focus:ring-primary/20">
+                        <option>آخر 6 أشهر</option>
+                        <option>عام 2024</option>
+                    </select>
+                </div>
+                <div class="p-6">
+                    <div class="h-64 bg-gray-50 rounded-xl border border-dashed border-gray-300 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-end justify-around px-8 pb-4">
+                            <div class="w-12 bg-primary/20 h-[30%] rounded-t-lg relative group">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">12K</div>
+                            </div>
+                            <div class="w-12 bg-primary/40 h-[50%] rounded-t-lg relative group">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">18K</div>
+                            </div>
+                            <div class="w-12 bg-primary/60 h-[45%] rounded-t-lg relative group">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">15K</div>
+                            </div>
+                            <div class="w-12 bg-primary/80 h-[80%] rounded-t-lg relative group border-2 border-secondary">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">28K</div>
+                            </div>
+                            <div class="w-12 bg-primary h-[65%] rounded-t-lg relative group">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">22K</div>
+                            </div>
+                            <div class="w-12 bg-secondary h-[90%] rounded-t-lg relative group">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">32K</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-400 font-medium z-10 bg-white/80 px-4 py-2 rounded-full shadow-sm">رسم بياني تفاعلي للإيرادات</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Brokers -->
+            <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+                <div class="px-6 py-4 border-b border-outline-variant bg-gray-50/50">
+                    <h2 class="font-bold text-lg">الأعلى إنجازاً (الوسطاء)</h2>
+                </div>
+                <div class="p-4 space-y-4">
+                    <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 border border-transparent hover:border-outline-variant transition-all">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">ع</div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-bold">عبدالله القحطاني</h4>
+                            <p class="text-xs text-gray-500">12 صفقة مكتملة</p>
+                        </div>
+                        <span class="text-xs font-bold text-primary">85K ر.س</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 border border-transparent hover:border-outline-variant transition-all">
+                        <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold">م</div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-bold">محمد الشهري</h4>
+                            <p class="text-xs text-gray-500">9 صفقات مكتملة</p>
+                        </div>
+                        <span class="text-xs font-bold text-primary">62K ر.س</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 border border-transparent hover:border-outline-variant transition-all">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">س</div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-bold">سلطان العمري</h4>
+                            <p class="text-xs text-gray-500">7 صفقات مكتملة</p>
+                        </div>
+                        <span class="text-xs font-bold text-primary">48K ر.س</span>
+                    </div>
+                </div>
+                <div class="p-4 border-t border-outline-variant">
+                    <button class="w-full py-2 text-primary text-sm font-medium hover:underline">عرض كافة الوسطاء</button>
+                </div>
+            </div>
+
+            <!-- Custom Report Generator -->
+            <div class="lg:col-span-3 bg-white rounded-2xl border border-outline-variant shadow-sm p-8">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                    <div>
+                        <h2 class="text-xl font-bold text-primary mb-2">منشئ التقارير المخصص</h2>
+                        <p class="text-sm text-gray-500">اختر المعايير لتوليد تقرير تفصيلي دقيق</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-xs text-gray-400">التاريخ من</label>
+                            <input type="date" class="border border-outline-variant rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/20">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-xs text-gray-400">التاريخ إلى</label>
+                            <input type="date" class="border border-outline-variant rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/20">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-xs text-gray-400">نوع الخدمة</label>
+                            <select class="border border-outline-variant rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/20 min-w-[150px]">
+                                <option>الكل</option>
+                                <option>بناء ذاتي</option>
+                                <option>شراء وحدة</option>
+                                <option>حلول مالية</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-xs text-white invisible">إجراء</label>
+                            <button class="bg-primary text-white px-8 py-2 rounded-lg font-bold hover:bg-opacity-90 shadow-md shadow-primary/20 transition-all">توليد الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Print Footer (Only shown when printing) -->
+    <div class="print-only hidden fixed bottom-8 left-8 right-8 border-t pt-4 text-center">
+        <div class="flex justify-between items-center">
+            <p class="text-xs text-gray-400">تم استخراج هذا التقرير آلياً من نظام المنصة الشاملة للوساطة</p>
+            <div class="flex items-center gap-2">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB5SlsbObi3E2ReF7zywrGiishQjFYLe06z2RgK8cpXzTVOvnmnBgid8MJKFDiOetxJTp5SKqG_eLfxzE6CO_sQJC6J6sxlVa1zqeh-KPOnKcogoazJnEMeuoT-8xP33Z3LybX6dUj7S-xyf5ZFK6ddKK_-WbW5rk4gU5odsQLTWhZHBClsdyf6rHFslgdb7JJQrQRkEuLmw2FtcJoVyoGSJFuQsTC9FwccsBR0GU-fjag1PhiGijalsVFX3sMZQspxlc" class="h-6">
+                <span class="text-sm font-bold text-primary">wasata.sa</span>
+            </div>
+            <p class="text-xs text-gray-400">تاريخ الطباعة: <span id="currentDate"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString('ar-SA');
+    </script>
+</body>
+</html>
