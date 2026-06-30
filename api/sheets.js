@@ -1,4 +1,3 @@
-
 import { google } from "googleapis";
 
 const SHEET_NAMES = {
@@ -77,18 +76,11 @@ export default async function handler(req, res) {
         requestBody: { values: [values] }
       });
 
-      return res.status(200).json({
-        ok: true,
-        sheet,
-        updates: out.data.updates || null
-      });
+      return res.status(200).json({ ok: true, sheet, updates: out.data.updates || null });
     }
 
     return res.status(405).json({ ok: false, error: "Method Not Allowed" });
   } catch (e) {
-    return res.status(500).json({
-      ok: false,
-      error: e.message || "Internal Server Error"
-    });
+    return res.status(500).json({ ok: false, error: e.message || "Internal Server Error" });
   }
 }
