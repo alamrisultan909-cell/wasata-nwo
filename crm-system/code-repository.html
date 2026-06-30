@@ -193,7 +193,7 @@
 <!-- Repository Bento Grid -->
 <div class="grid grid-cols-12 gap-lg">
 <!-- Root Structure -->
-<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col">
+<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col" data-folder="root">
 <div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-primary">folder_open</span>
@@ -202,31 +202,31 @@
 <button class="text-xs text-secondary font-bold hover:underline" onclick="copyAll('root')">نسخ الكل</button>
 </div>
 <div class="flex-1 p-sm space-y-xs">
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="vercel.json">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-amber-500">settings_phone</span>
 <span class="font-data-mono text-data-mono">vercel.json</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity" data-action="copy" data-file="vercel.json">نسخ الكود</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="package.json">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-blue-500">data_object</span>
 <span class="font-data-mono text-data-mono">package.json</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity" data-action="copy" data-file="package.json">نسخ الكود</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="README.md">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-slate-400">description</span>
 <span class="font-data-mono text-data-mono">README.md</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2 transition-opacity" data-action="copy" data-file="README.md">نسخ الكود</button>
 </div>
 </div>
 </div>
 <!-- Public Site Folder -->
-<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm">
+<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm" data-folder="public-site">
 <div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-secondary">folder</span>
@@ -235,31 +235,31 @@
 <button class="text-xs text-secondary font-bold hover:underline" onclick="copyAll('public-site')">نسخ الكل</button>
 </div>
 <div class="flex-1 p-sm space-y-xs">
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="index.html">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-orange-500">html</span>
 <span class="font-data-mono text-data-mono">index.html</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="public-site/index.html">نسخ الكود</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="globals.css">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-blue-400">css</span>
 <span class="font-data-mono text-data-mono">globals.css</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="public-site/globals.css">نسخ الكود</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="main.js">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-yellow-500">javascript</span>
 <span class="font-data-mono text-data-mono">main.js</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="public-site/main.js">نسخ الكود</button>
 </div>
 </div>
 </div>
 <!-- CRM System Folder -->
-<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm">
+<div class="col-span-12 lg:col-span-4 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm" data-folder="crm-system">
 <div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-primary">folder</span>
@@ -268,31 +268,31 @@
 <button class="text-xs text-secondary font-bold hover:underline" onclick="copyAll('crm-system')">نسخ الكل</button>
 </div>
 <div class="flex-1 p-sm space-y-xs">
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="dashboard.tsx">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-blue-600">terminal</span>
 <span class="font-data-mono text-data-mono">dashboard.tsx</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="crm-system/dashboard.tsx">نسخ الكود</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="transactions.tsx">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-blue-600">terminal</span>
 <span class="font-data-mono text-data-mono">transactions.tsx</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="crm-system/transactions.tsx">نسخ الكود</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg border border-transparent transition-colors group" data-file="api-routes.ts">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-purple-500">database</span>
 <span class="font-data-mono text-data-mono">api-routes.ts</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ الكود</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="crm-system/api-routes.ts">نسخ الكود</button>
 </div>
 </div>
 </div>
 <!-- Knowledge Base Folder -->
-<div class="col-span-12 lg:col-span-8 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm">
+<div class="col-span-12 lg:col-span-8 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm" data-folder="knowledge-base">
 <div class="p-md bg-surface-container-high flex justify-between items-center border-b border-outline-variant">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-primary">folder_special</span>
@@ -304,33 +304,33 @@
 </div>
 </div>
 <div class="flex-1 p-sm grid grid-cols-1 md:grid-cols-2 gap-x-lg">
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="legal-framework.md">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-slate-400">article</span>
 <span class="font-data-mono text-data-mono">legal-framework.md</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/legal-framework.md">نسخ</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="training-v1.md">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-slate-400">article</span>
 <span class="font-data-mono text-data-mono">training-v1.md</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/training-v1.md">نسخ</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="faq-mediation.md">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-slate-400">article</span>
 <span class="font-data-mono text-data-mono">faq-mediation.md</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/faq-mediation.md">نسخ</button>
 </div>
-<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group">
+<div class="file-tree-hover flex justify-between items-center p-sm rounded-lg transition-colors group" data-file="config.json">
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-blue-500">schema</span>
 <span class="font-data-mono text-data-mono">config.json</span>
 </div>
-<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2">نسخ</button>
+<button class="opacity-0 group-hover:opacity-100 p-xs bg-primary text-white rounded text-xs px-2" data-action="copy" data-file="knowledge-base/config.json">نسخ</button>
 </div>
 </div>
 </div>
@@ -382,23 +382,37 @@
 <!-- Micro-interactions Script -->
 <script>
         function copyAll(folder) {
-            alert('تم نسخ محتويات مجلد ' + folder + ' إلى الحافظة بنجاح.');
+            const files = [];
+            document.querySelectorAll('[data-folder="' + folder + '"] [data-file]').forEach(el => {
+                files.push(el.getAttribute('data-file'));
+            });
+            const text = files.length
+                ? folder + '/\n' + files.map(f => '  ' + f).join('\n')
+                : folder + '/';
+            navigator.clipboard.writeText(text).then(() => {
+                alert('تم نسخ محتويات مجلد ' + folder + ' إلى الحافظة بنجاح.');
+            }).catch(() => {
+                alert('تعذّر النسخ. يرجى المحاولة مرة أخرى.');
+            });
         }
 
-        // Handle copy button clicks
-        document.querySelectorAll('button').forEach(btn => {
-            if(btn.innerText === 'نسخ الكود' || btn.innerText === 'نسخ') {
-                btn.addEventListener('click', function(e) {
-                    const originalText = this.innerText;
+        // Handle individual file copy button clicks using data attributes
+        document.querySelectorAll('button[data-action="copy"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const fileName = this.getAttribute('data-file') || this.closest('[data-file]')?.getAttribute('data-file') || '';
+                const originalText = this.innerText;
+                navigator.clipboard.writeText(fileName).then(() => {
                     this.innerText = 'تم النسخ!';
                     this.classList.replace('bg-primary', 'bg-secondary');
-                    
                     setTimeout(() => {
                         this.innerText = originalText;
                         this.classList.replace('bg-secondary', 'bg-primary');
                     }, 2000);
+                }).catch(() => {
+                    this.innerText = 'فشل النسخ';
+                    setTimeout(() => { this.innerText = originalText; }, 2000);
                 });
-            }
+            });
         });
     </script>
 </body></html>
