@@ -1,106 +1,39 @@
-<!-- index.html - النسخة النهائية المصححة الوظائف للمنصة الشاملة للوساطة -->
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المنصة الشاملة للوساطة - الموقع الرسمي</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #004a99, #00a3ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>المنصة الشاملة للوساطة - الرئيسية</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<style>
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<img alt="Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArXda_QVT8TD0jR8UdkjcIiNGbnAspoH5bimFVj2zJXtQOLj4bps-dgk4s1EX7_L-ElEY9r-A0Epi7DkRsd6WyVZoz5B3UOXo5g3ebBtzKE-nYEeVCVjms8k9mexabBCmitQL62afX2U8EXigQL0PP3LHP72aGq0dumYwHkBfT1cZ6OaMa4Zccle7a3CJkc3-qvFsuBNB8hPVqlJzaewLmtLWuUVr6i5VzYh4c3e6dV2PqxSXDdaejBA">
+<span class="text-xl font-bold text-slate-800">المنصة الشاملة للوساطة</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-blue-600 font-medium" href="#">الرئيسية</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium" href="#services">خدماتنا</a>
+<a class="text-slate-600 hover:text-blue-600 font-medium" href="#about">من نحن</a>
+<a class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-700 transition-all" href="login.html">دخول النظام</a>
+</div>
+</div>
+</nav>
+<section class="pt-32 pb-20 px-6">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-6">ارتقِ بنطاق <span class="text-blue-600">وصولك المالي</span></h1>
+<p class="text-xl text-slate-600 mb-10 leading-relaxed">نقدم منظومة رقمية متقدمة تربط الوسطاء بالمؤسسات المالية، مع ضمان الشفافية الكاملة، الأتمتة الذكية، والامتثال.</p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 hover:bg-slate-800 transition-all" href="login.html">ابدأ رحلتك الآن</a>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnqYHbmE_ZvY0TiyAgX3siENLcd_MNO8wqGkQiMkoYDS02gizRxghAlCmH54O4qckJbuX1LfPNXEZUS91Hqup1fFkDnc_3yG8oIiCoaP60qxRUCK1O-lPqiBJnR15DbP_EbKlzeUwSAJdprVP4qs353svyZSme-_8SZUnvf23gvUH_0WPElctM5seAWwHaOP6IfmN4wJeMzOjzpAZk7BopzERnT4_TYPa6HdWgbJoj3IzXlD0qaDArFcI7QZENAdqcvA4" alt="Logo" class="h-12 w-auto">
-                <span class="text-xl font-bold text-slate-800">المنصة الشاملة للوساطة</span>
-            </div>
-            
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#home" class="font-medium text-blue-600 border-b-2 border-blue-600 pb-1">الرئيسية</a>
-                <a href="#services" class="font-medium text-slate-600 hover:text-blue-600 transition-colors">خدماتنا</a>
-                <a href="#about" class="font-medium text-slate-600 hover:text-blue-600 transition-colors">من نحن</a>
-                <a href="login.html" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all active:scale-95">دخول النظام</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="pt-40 pb-20 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
-            <h1 class="text-5xl md:text-7xl font-black leading-tight mb-8">
-                ارتقِ بنطاق <span class="gradient-text">وصولك المالي</span>
-            </h1>
-            <p class="text-xl text-slate-600 max-w-2xl mb-12 leading-relaxed">
-                نقدم منظومة رقمية متقدمة تربط الوسطاء بالمؤسسات المالية، مع ضمان الشفافية الكاملة، الأتمتة الذكية، والامتثال.
-            </p>
-            <div class="flex gap-4">
-                <a href="login.html" class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 transition-all active:scale-95 shadow-xl shadow-slate-200">
-                    ابدأ رحلتك الآن
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content/Services Placeholder -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
-                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">حلول تمويلية</h3>
-                <p class="text-slate-600 leading-relaxed">حلول متكاملة تغطي كافة الاحتياجات التمويلية للأفراد والمؤسسات بدقة متناهية.</p>
-            </div>
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
-                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">أمان وامتثال</h3>
-                <p class="text-slate-600 leading-relaxed">نظام محكم يضمن خصوصية البيانات والامتثال الكامل للمعايير الرقابية والتشريعية.</p>
-            </div>
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
-                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">أرشفة ذكية</h3>
-                <p class="text-slate-600 leading-relaxed">ربط مباشر مع جداول بيانات جوجل لضمان أرشفة فورية وسهولة استرجاع المعلومات.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500">
-            <div class="flex items-center gap-3">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7cJsrZeJtLTWbQ2mpvpCEecfLkWEs3MdMZOXTjgSwtVkgQWnAASHn1pW1URDoS0jgZ58TDv4jWfLm0gk6pUT3TpUCQFBAUOddlWpSULdqdf0ln4hAoKmXyjZp8FV6EttGP5hwrH3LkinsKtIqifkNI33c2Abr8ztC6_PBnYwSKvc6G5ZBhNTFmXJn62s4Clcy-NLfJfb8fdXgpZmG3tYwswS4S-HVQGWMNe0ToPwvvXC69sqTjilXpO2Ph97pKG5_NKg" alt="Logo" class="h-8 opacity-70 grayscale hover:grayscale-0 transition-all">
-                <span>© 2024 المنصة الشاملة للوساطة. جميع الحقوق محفوظة.</span>
-            </div>
-            <div class="flex gap-8">
-                <a href="#" class="hover:text-blue-600">الشروط والأحكام</a>
-                <a href="#" class="hover:text-blue-600">سياسة الخصوصية</a>
-                <a href="#" class="hover:text-blue-600">اتصل بنا</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+</body></html>
