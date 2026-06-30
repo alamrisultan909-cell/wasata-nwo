@@ -23,5 +23,4 @@
       "source": "/(.*)",
       "destination": "/public-site/$1"
     }
-  ]
-
+  
