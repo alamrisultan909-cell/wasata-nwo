@@ -263,7 +263,8 @@
                 const text = await res.text();
                 await navigator.clipboard.writeText(text);
                 showToast('تم نسخ كود ' + name + ' بنجاح!');
-            } catch (_) {
+            } catch (err) {
+                console.error('copyCode fetch failed for', key, err);
                 // Fallback: open the file on GitHub
                 window.open(url, '_blank');
                 showToast('تم فتح الملف في GitHub – انسخ الكود من هناك');
