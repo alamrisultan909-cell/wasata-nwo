@@ -1,1 +1,343 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الوسطاء - المنصة الشاملة للوساطة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        secondary: '#0ea5e9',
+                        surface: '#f8fafc',
+                        'surface-container': '#ffffff',
+                        outline: '#e2e8f0',
+                    },
+                    fontFamily: {
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; background-color: #f8fafc; }
+        .sidebar-active { background-color: rgba(14, 165, 233, 0.1); color: #0ea5e9; border-left: 4px solid #0ea5e9; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-primary text-white flex flex-col fixed h-full transition-all duration-300 z-50">
+        <div class="p-6 flex items-center gap-3">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAylwVXjNhEi7T1kPYe2qELeBuRsqERiSXI4ZG5rzI2tJ4dMi4QzHB3IEOprYjElplkkATSvrQyYhnY54t49knXFKrVM6RwuruVKvLpydMjAZAznWTTmFPGO2s_gQp2xk_tydIVQ6Llj1wM-dHiF1LhiV4LKiMwwp3BkZzYQIz1MFPwB9FL4AIyCyc-wDD0WbNVGBWMDxypd-oThXXWZJI0c0gMXeweeZyKYt0y67g_8wpbsv_gnkmYKgojSWut2jxJRfw" alt="Logo" class="w-10 h-10">
+            <span class="text-lg font-bold">المنصة الشاملة</span>
+        </div>
+        
+        <nav class="flex-1 mt-4 px-4 space-y-2">
+            <a href="dashboard.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                <span class="material-icons-outlined">dashboard</span>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="clients.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                <span class="material-icons-outlined">groups</span>
+                <span>إدارة العملاء</span>
+            </a>
+            <a href="brokers.html" class="flex items-center gap-3 p-3 rounded-lg sidebar-active transition-colors">
+                <span class="material-icons-outlined">handshake</span>
+                <span>إدارة الوسطاء</span>
+            </a>
+            <a href="employees.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                <span class="material-icons-outlined">badge</span>
+                <span>الموظفين</span>
+            </a>
+            <a href="financials.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                <span class="material-icons-outlined">account_balance_wallet</span>
+                <span>السجلات المالية</span>
+            </a>
+            <a href="reports.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                <span class="material-icons-outlined">analytics</span>
+                <span>التقارير</span>
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-white/10">
+            <a href="login.html" class="flex items-center gap-3 p-3 rounded-lg text-red-400 hover:bg-red-500/10 transition-colors">
+                <span class="material-icons-outlined">logout</span>
+                <span>تسجيل الخروج</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 mr-64 p-8">
+        <!-- Top Bar -->
+        <header class="flex justify-between items-center mb-8 bg-white p-4 rounded-2xl shadow-sm border border-outline">
+            <div class="flex items-center gap-4">
+                <h1 class="text-2xl font-bold text-primary">إدارة الوسطاء</h1>
+                <div class="relative">
+                    <span class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                    <input type="text" placeholder="بحث عن وسيط..." class="pr-10 pl-4 py-2 bg-slate-50 border border-outline rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/20 w-64">
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-slate-400 hover:bg-slate-50 rounded-full relative">
+                    <span class="material-icons-outlined">notifications</span>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <div class="flex items-center gap-3 pr-4 border-r border-outline">
+                    <div class="text-left">
+                        <p class="text-sm font-bold text-primary">أحمد العتيبي</p>
+                        <p class="text-xs text-slate-500">المدير العام</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center border border-outline">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2krR-Vw6RDeHptngVObxQIsgXYPYg8L-Bd3iatzKXI9jYJD7p5D-MO4S8ZUUPAjXIM0CwT6Hc0jtdUaVnQbMeK3ATPppUTDLSanooh3UDwBWDmUlNMwIrqwxs2N3iAnG0PIJ2Q288048MtuAHruJp8LhMwCfjlooqZBIqdrN7yKPyXEvvTnhOuKRClGVLuSgSPSWzn4kbHhPeNDdafjfvuAN5mkjI4D2zFdkg8XcFqpH3Zl4zy1loBT-KfdRYK-1byc0" alt="User" class="w-6 h-6 opacity-50">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl border border-outline shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                        <span class="material-icons-outlined text-2xl">groups</span>
+                    </div>
+                </div>
+                <p class="text-slate-500 text-sm">إجمالي الوسطاء</p>
+                <h3 class="text-2xl font-bold text-primary">142</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-outline shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="p-3 bg-green-50 text-green-600 rounded-xl">
+                        <span class="material-icons-outlined text-2xl">trending_up</span>
+                    </div>
+                </div>
+                <p class="text-slate-500 text-sm">متوسط العمولة</p>
+                <h3 class="text-2xl font-bold text-primary">4.2%</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-outline shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="p-3 bg-amber-50 text-amber-600 rounded-xl">
+                        <span class="material-icons-outlined text-2xl">payments</span>
+                    </div>
+                </div>
+                <p class="text-slate-500 text-sm">إجمالي العمولات الموزعة</p>
+                <h3 class="text-2xl font-bold text-primary">842,500 <span class="text-sm font-medium">ر.س</span></h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-outline shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="p-3 bg-red-50 text-red-600 rounded-xl">
+                        <span class="material-icons-outlined text-2xl">history</span>
+                    </div>
+                </div>
+                <p class="text-slate-500 text-sm">طلبات معلقة</p>
+                <h3 class="text-2xl font-bold text-primary">18</h3>
+            </div>
+        </div>
+
+        <!-- Brokers Table -->
+        <div class="bg-white rounded-2xl border border-outline shadow-sm overflow-hidden">
+            <div class="p-6 border-b border-outline flex justify-between items-center bg-slate-50/50">
+                <h2 class="text-lg font-bold text-primary">قائمة الوسطاء المعتمدين</h2>
+                <div class="flex gap-2">
+                    <button class="flex items-center gap-2 px-4 py-2 text-sm border border-outline rounded-xl hover:bg-slate-50 transition-colors">
+                        <span class="material-icons-outlined text-sm">filter_alt</span>
+                        تصفية
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-secondary text-white text-sm rounded-xl hover:bg-secondary/90 transition-colors shadow-lg shadow-secondary/20">
+                        <span class="material-icons-outlined text-sm">add</span>
+                        إضافة وسيط جديد
+                    </button>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-right border-collapse">
+                    <thead class="bg-slate-50 text-slate-500 text-sm">
+                        <tr>
+                            <th class="px-6 py-4 font-medium">اسم الوسيط</th>
+                            <th class="px-6 py-4 font-medium">معدل العمولة</th>
+                            <th class="px-6 py-4 font-medium">عدد العملاء</th>
+                            <th class="px-6 py-4 font-medium">إجمالي المبالغ</th>
+                            <th class="px-6 py-4 font-medium">الحالة</th>
+                            <th class="px-6 py-4 font-medium">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y border-outline">
+                        <tr class="hover:bg-slate-50 transition-colors group">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">مح</div>
+                                    <div>
+                                        <p class="text-sm font-bold text-primary">محمد حسن العمري</p>
+                                        <p class="text-xs text-slate-500">ID: BR-2041</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-medium">2.5%</td>
+                            <td class="px-6 py-4 text-sm">45 عميل</td>
+                            <td class="px-6 py-4 text-sm font-bold text-slate-700">12,450.00 ر.س</td>
+                            <td class="px-6 py-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-bold">نشط</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <button class="p-2 text-slate-400 hover:text-secondary hover:bg-secondary/10 rounded-lg transition-all">
+                                    <span class="material-icons-outlined">visibility</span>
+                                </button>
+                                <button class="p-2 text-slate-400 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-all">
+                                    <span class="material-icons-outlined">edit</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors group">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">سا</div>
+                                    <div>
+                                        <p class="text-sm font-bold text-primary">سارة ابراهيم الفهد</p>
+                                        <p class="text-xs text-slate-500">ID: BR-1988</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-medium">5.0%</td>
+                            <td class="px-6 py-4 text-sm">112 عميل</td>
+                            <td class="px-6 py-4 text-sm font-bold text-slate-700">48,200.50 ر.س</td>
+                            <td class="px-6 py-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-bold">نشط</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <button class="p-2 text-slate-400 hover:text-secondary hover:bg-secondary/10 rounded-lg transition-all">
+                                    <span class="material-icons-outlined">visibility</span>
+                                </button>
+                                <button class="p-2 text-slate-400 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-all">
+                                    <span class="material-icons-outlined">edit</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors group">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold">خا</div>
+                                    <div>
+                                        <p class="text-sm font-bold text-primary">خالد بن وليد</p>
+                                        <p class="text-xs text-slate-500">ID: BR-2105</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-sm font-medium">3.5%</td>
+                            <td class="px-6 py-4 text-sm">0 عميل</td>
+                            <td class="px-6 py-4 text-sm font-bold text-slate-700">0.00 ر.س</td>
+                            <td class="px-6 py-4">
+                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">قيد المراجعة</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <button class="p-2 text-slate-400 hover:text-secondary hover:bg-secondary/10 rounded-lg transition-all">
+                                    <span class="material-icons-outlined">visibility</span>
+                                </button>
+                                <button class="p-2 text-slate-400 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-all">
+                                    <span class="material-icons-outlined">edit</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-4 bg-slate-50/50 border-t border-outline flex justify-between items-center">
+                <span class="text-sm text-slate-500">عرض 1-3 من أصل 142 وسيط</span>
+                <div class="flex gap-1">
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline bg-white text-slate-400 hover:bg-slate-50">
+                        <span class="material-icons-outlined text-sm">chevron_right</span>
+                    </button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg bg-secondary text-white font-bold text-sm">1</button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline bg-white text-slate-600 hover:bg-slate-50 text-sm">2</button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline bg-white text-slate-400 hover:bg-slate-50">
+                        <span class="material-icons-outlined text-sm">chevron_left</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+            <div class="bg-white p-6 rounded-2xl border border-outline shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-bold text-primary">أحدث النشاطات</h3>
+                    <button class="text-sm text-secondary font-medium">عرض الكل</button>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-2 h-2 mt-2 bg-secondary rounded-full"></div>
+                        <div class="flex-1 border-b border-slate-50 pb-4">
+                            <p class="text-sm font-bold text-primary">تم اعتماد الوسيط "فيصل السبيعي" - فئة A</p>
+                            <p class="text-xs text-slate-500 mt-1">قبل 12 دقيقة</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-2 h-2 mt-2 bg-amber-500 rounded-full"></div>
+                        <div class="flex-1 border-b border-slate-50 pb-4">
+                            <p class="text-sm font-bold text-primary">تعديل نسبة عمولة "ريم القحطاني"</p>
+                            <p class="text-xs text-slate-500 mt-1">قبل 4 ساعات</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-2 h-2 mt-2 bg-green-500 rounded-full"></div>
+                        <div class="flex-1 border-b border-slate-50 pb-4">
+                            <p class="text-sm font-bold text-primary">إضافة 12 عميل جديد لـ "سارة ابراهيم"</p>
+                            <p class="text-xs text-slate-500 mt-1">أمس</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl border border-outline shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-bold text-primary">توزيع العمولات الشهري</h3>
+                    <select class="bg-slate-50 border border-outline rounded-lg text-xs p-1 px-2 focus:outline-none">
+                        <option>آخر 6 أشهر</option>
+                        <option>آخر سنة</option>
+                    </select>
+                </div>
+                <div class="flex items-end justify-between h-48 gap-2 pt-4 px-2">
+                    <div class="flex-1 bg-slate-100 rounded-t-lg transition-all hover:bg-secondary h-[40%] relative group">
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Jan: 12k</div>
+                    </div>
+                    <div class="flex-1 bg-slate-100 rounded-t-lg transition-all hover:bg-secondary h-[60%] relative group"></div>
+                    <div class="flex-1 bg-slate-100 rounded-t-lg transition-all hover:bg-secondary h-[50%] relative group"></div>
+                    <div class="flex-1 bg-slate-100 rounded-t-lg transition-all hover:bg-secondary h-[75%] relative group"></div>
+                    <div class="flex-1 bg-slate-100 rounded-t-lg transition-all hover:bg-secondary h-[35%] relative group"></div>
+                    <div class="flex-1 bg-primary rounded-t-lg transition-all hover:bg-secondary h-[90%] relative group"></div>
+                </div>
+                <div class="flex justify-between mt-4 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Simple search functionality simulation
+        document.querySelector('input[type="text"]').addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                row.style.display = text.includes(term) ? '' : 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
