@@ -1,13 +1,8 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "routes": [
-    { "src": "^/api/(.*)$", "dest": "/api/$1.js" },
+    { "src": "^/api/(.*)$", "dest": "/api/$1" },
     { "src": "^/app$", "dest": "/crm-system/dashboard.html" },
     { "src": "^/app/(.*)$", "dest": "/crm-system/$1" },
     { "src": "^/knowledge-base$", "dest": "/knowledge-base/index.html" },
