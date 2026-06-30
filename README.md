@@ -11,7 +11,7 @@ Static website export for the Wasata platform with three main areas:
 ## What was improved
 - Reduced repeated setup across the static pages by introducing shared assets for base styling and the knowledge-base theme.
 - Improved HTML semantics, metadata, focus states, and responsive behavior while preserving the same color palette and overall look.
-- Enhanced navigation clarity and reading flow in the knowledge base, especially `/home/runner/work/wasata-nwo/wasata-nwo/knowledge-base/customer-support.html`.
+- Enhanced navigation clarity and reading flow in the knowledge base, especially `knowledge-base/customer-support.html`.
 - Kept existing routing behavior intact by updating `vercel.json` to expose shared static assets safely.
 
 ## Local preview
