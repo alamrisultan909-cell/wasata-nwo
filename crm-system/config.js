@@ -1,10 +1,5 @@
-// Google Sheets API Configuration - Comprehensive Mediation Platform
-// هذا الملف هو المحرك الرئيسي للربط السحابي مع جداول بيانات جوجل
 const CONFIG = {
-    // 1. معرف الجدول (Spreadsheet ID)
     SPREADSHEET_ID: '1N-E6G5-SULTAN-WASATA-SHEET-ID', 
-    
-    // 2. مفتاح الوصول الخاص (PRIVATE KEY) - تم تنسيقه ليعمل مباشرة في GitHub/Vercel
     PRIVATE_KEY: `-----BEGIN PRIVATE KEY-----
 MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC1cXrbv5r+2fRy
 WuerYM+kaFvosyo7xoGqe2SfrYZu/KA2tTx6dusVSts9XPkEAx2CQ+UeB4Mpc2+3
@@ -33,21 +28,14 @@ JssVUiphP2dd7LCM/NZ1AR9h7Q1RNSQ9xhUpuYkFpJhmvhKfK6QqO7SGPr+kjNWy
 9RngpJ+gMqnwDZen7jnmcI4nXLfo3XFI6EYR1yTX1C66Twy7eT4OWuIRraegVCo5
 u+1Q8yEMC6lOgquUjMTVtw==
 -----END PRIVATE KEY-----`,
-
-    // 3. البريد الإلكتروني لخدمة جوجل المعتمد
     CLIENT_EMAIL: 'wasata-service-account@wasata-nwo.iam.gserviceaccount.com',
-
-    // 4. أسماء أوراق العمل في جدولك (يجب أن تطابق الأسماء في قوقل شيت)
     SHEETS: {
         CUSTOMERS: 'بيانات العملاء',
         FINANCIALS: 'عمولات المكتب',
         PAYMENTS: 'سداد العملاء',
         USERS: 'إدارة المستخدمين'
     },
-    
-    // 5. روابط النشر الرسمية
     DEPLOYMENT_URL: 'https://wasata.sa/app',
     PUBLIC_SITE_URL: 'https://wasata.sa'
 };
-
 export default CONFIG;
