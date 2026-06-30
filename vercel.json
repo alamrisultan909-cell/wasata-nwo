@@ -1,14 +1,18 @@
 {
   "version": 2,
-  "name": "wasata-platform",
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/:path*" },
-    { "source": "/app", "destination": "/crm-system/dashboard.html" },
-    { "source": "/app/(.*)", "destination": "/crm-system/$1" },
-    { "source": "/knowledge-base", "destination": "/knowledge-base/index.html" },
-    { "source": "/knowledge-base/(.*)", "destination": "/knowledge-base/$1" },
-    { "source": "/", "destination": "/public-site/index.html" },
-    { "source": "/(.*)", "destination": "/public-site/$1" }
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "routes": [
+    { "src": "^/api/(.*)$", "dest": "/api/$1.js" },
+    { "src": "^/app$", "dest": "/crm-system/dashboard.html" },
+    { "src": "^/app/(.*)$", "dest": "/crm-system/$1" },
+    { "src": "^/knowledge-base$", "dest": "/knowledge-base/index.html" },
+    { "src": "^/knowledge-base/(.*)$", "dest": "/knowledge-base/$1" },
+    { "src": "^/$", "dest": "/public-site/index.html" },
+    { "src": "^/(.*)$", "dest": "/public-site/$1" }
   ]
 }
