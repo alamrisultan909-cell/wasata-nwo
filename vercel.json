@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "wasata-platform",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/shared/(.*)", "destination": "/shared/$1" },
+    { "source": "/app/(.*)", "destination": "/crm-system/$1" },
+    { "source": "/app", "destination": "/crm-system/dashboard.html" },
+    { "source": "/knowledge-base/(.*)", "destination": "/knowledge-base/$1" },
+    { "source": "/knowledge-base", "destination": "/knowledge-base/index.html" },
+    { "source": "/(.*)", "destination": "/public-site/$1" }
+  ]
+}
