@@ -75,6 +75,11 @@ u+1Q8yEMC6lOgquUjMTVtw==
     PUBLIC_SITE_URL: 'https://wasata.sa'
 };
 
+/**
+ * Extracts and formats the Google API private key from environment variables,
+ * supporting base64-encoded and raw PEM keys, with a fallback to the configuration value.
+ * @returns {string} The formatted private key.
+ */
 function keyFromEnv() {
   const b64 = process.env.GOOGLE_PRIVATE_KEY_BASE64;
   if (b64) {
