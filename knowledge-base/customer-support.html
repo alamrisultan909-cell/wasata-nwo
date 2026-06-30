@@ -1,120 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إتقان علاقات ودعم العملاء - مكتبة المعرفة</title>
+    <title>كتاب: إتقان علاقات ودعم العملاء</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        body { font-family: 'IBM Plex Sans Arabic', sans-serif; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#004a99',
+                        secondary: '#1e293b',
+                        accent: '#f59e0b',
+                        surface: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['IBM Plex Sans Arabic', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-white text-[#1e293b]">
+<body class="bg-slate-50 font-sans text-slate-800">
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 text-primary font-bold text-sm">
+                <a href="/knowledge-base" class="hover:underline">المكتبة التعليمية</a>
+                <span>/</span>
+                <span class="text-slate-400">الوحدة السادسة</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-secondary bg-blue-50 px-3 py-1 rounded-full">مسار الوسيط المعتمد</span>
+            </div>
+        </div>
+    </header>
 
-    <div class="max-w-5xl mx-auto px-6 py-12">
-        
-        <!-- Hero Section -->
-        <div class="flex flex-col md:flex-row gap-12 items-center mb-20 bg-gray-50 p-10 rounded-[40px] border border-gray-100">
-            <div class="flex-1">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-[#004a99] rounded-full text-xs font-bold mb-6">
-                    <span class="material-icons text-sm">verified</span>
-                    مسار الوسيط المعتمد
-                </div>
-                <h1 class="text-5xl font-black mb-6 leading-tight text-[#002d72]">إتقان علاقات ودعم العملاء</h1>
-                <p class="text-xl text-gray-500 leading-relaxed mb-8">دليل شامل يركز على فن بناء الثقة وإدارة النزاعات في بيئة مؤسسية. يتناول هذا المديول الأدوات الاستراتيجية لتحويل التفاعلات العادية إلى علاقات شراكة طويلة الأمد من خلال منهجية أكاديمية دقيقة.</p>
-                <div class="flex items-center gap-6">
-                    <div class="flex flex-col">
-                        <span class="text-2xl font-bold text-[#004a99]">35% مكتمل</span>
-                        <div class="w-48 h-2 bg-gray-200 rounded-full mt-2">
-                            <div class="w-[35%] h-full bg-[#004a99] rounded-full"></div>
-                        </div>
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row gap-12 items-center mb-20">
+            <div class="w-full md:w-1/3">
+                <div class="aspect-[3/4] bg-primary rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8 text-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white/20 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    <h3 class="text-white text-xl font-bold mb-2">وحدات التعلم المهني</h3>
+                    <p class="text-blue-200 text-sm">علاقات ودعم العملاء</p>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-accent/30">
+                        <div class="h-full bg-accent w-1/3 transition-all duration-1000"></div>
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-80 h-[450px] bg-[#002d72] rounded-3xl shadow-2xl relative overflow-hidden flex items-center justify-center p-8 text-center border-8 border-white">
-                <div class="relative z-10">
-                    <span class="material-icons text-6xl text-blue-300 mb-4">support_agent</span>
-                    <h3 class="text-white text-xl font-bold">وحدات التعلم المهني</h3>
-                    <p class="text-blue-200 text-sm mt-2">علاقات ودعم العملاء</p>
+            <div class="w-full md:w-2/3">
+                <h1 class="text-5xl font-extrabold text-secondary mb-6 leading-tight">إتقان علاقات ودعم العملاء</h1>
+                <p class="text-lg text-slate-500 leading-relaxed mb-8">دليل شامل يركز على فن بناء الثقة وإدارة النزاعات في بيئة مؤسسية. يتناول هذا المديول الأدوات الاستراتيجية لتحويل التفاعلات العادية إلى علاقات شراكة طويلة الأمد من خلال منهجية أكاديمية دقيقة.</p>
+                <div class="flex items-center gap-4">
+                    <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary w-[35%]"></div>
+                    </div>
+                    <span class="text-sm font-bold text-primary">35% مكتمل</span>
                 </div>
-                <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
             </div>
         </div>
 
-        <!-- Lessons Timeline -->
-        <div class="space-y-16 relative">
-            <div class="absolute right-9 top-0 bottom-0 w-1 bg-gray-100 hidden md:block"></div>
+        <div class="space-y-16">
+            <section class="relative">
+                <div class="absolute -right-4 top-0 w-1 h-full bg-slate-100"></div>
+                <div class="flex items-center gap-4 mb-8 relative">
+                    <span class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-sm shadow-lg">01</span>
+                    <h2 class="text-3xl font-bold text-secondary">رحلة العميل المثالية</h2>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm leading-relaxed">
+                    <p class="text-slate-600 text-lg mb-8">تبدأ رحلة العميل قبل التلامس الأول بكثير وتنتهي عند النجاح في التنفيذ. في هذا الفصل، نحلل الخارطة الذهنية للعميل من لحظة "الاتصال" الأولى حتى "الإغلاق والتنفيذ"، مع التركيز على نقاط الضعف وفرص التعاون.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 rounded-2xl border border-dashed border-slate-300 flex items-center gap-4">
+                            <span class="material-icons-outlined text-primary">contact_support</span>
+                            <span class="font-bold text-secondary">الاتصال وتحديد التوقعات</span>
+                        </div>
+                        <div class="p-6 rounded-2xl border border-dashed border-slate-300 flex items-center gap-4">
+                            <span class="material-icons-outlined text-green-500">verified</span>
+                            <span class="font-bold text-secondary">آليات التنفيذ والالتزام</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Lesson 1 -->
-            <div class="relative pr-20">
-                <div class="absolute right-0 top-0 w-18 h-18 bg-[#002d72] text-white rounded-2xl flex flex-col items-center justify-center font-black shadow-lg z-10 hidden md:flex">
-                    <span class="text-xs opacity-60">الدرس</span>
-                    <span class="text-2xl">01</span>
+            <section class="relative">
+                <div class="absolute -right-4 top-0 w-1 h-full bg-slate-100"></div>
+                <div class="flex items-center gap-4 mb-8 relative">
+                    <span class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-sm shadow-lg">02</span>
+                    <h2 class="text-3xl font-bold text-secondary">إدارة الاعتراضات والشكاوى</h2>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-lg text-[10px] font-bold">قيد المراجعة</span>
                 </div>
-                <h2 class="text-3xl font-bold mb-4">رحلة العميل المثالية</h2>
-                <p class="text-lg text-gray-500 mb-8 max-w-3xl">تبدأ رحلة العميل قبل التلامس الأول بكثير وتنتهي عند النجاح في التنفيذ. في هذا الفصل، نحلل الخارطة الذهنية للعميل من لحظة "الاتصال" الأولى حتى "الإغلاق والتنفيذ"، مع التركيز على نقاط الضعف وفرص التعاون.</p>
-                
-                <div class="bg-white p-8 rounded-3xl border-2 border-dashed border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-50 text-[#004a99] flex items-center justify-center">
-                            <span class="material-icons">hub</span>
-                        </div>
-                        <div>
-                            <div class="font-bold">الاتصال وتحديد التوقعات</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-50 text-[#004a99] flex items-center justify-center">
-                            <span class="material-icons">task_alt</span>
-                        </div>
-                        <div>
-                            <div class="font-bold">آليات التنفيذ والالتزام</div>
-                        </div>
-                    </div>
+                <div class="bg-blue-50/50 p-10 rounded-3xl border border-blue-100 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
+                    <blockquote class="text-2xl italic text-secondary text-center mb-8">
+                        "الشكوى ليست عقبة، بل هي فرصة لاستعادة ولاء العميل وإعادة صياغة نموذج الخدمة الخاص بك."
+                    </blockquote>
+                    <p class="text-slate-500 text-center text-sm leading-relaxed">إدارة الأزمات في خدمة العملاء تتطلب ثباتاً انفعالياً ومنهجية تقنية. سنتعلم كيفية تحويل "الاعتراض" إلى "اتفاق"، وفن الحفاظ على العميل حتى في ظل الظروف الصعبة.</p>
                 </div>
+            </section>
+        </div>
+
+        <div class="mt-20 p-8 bg-white border border-slate-200 rounded-3xl shadow-sm">
+            <div class="flex items-center justify-between mb-6">
+                <h4 class="font-bold text-slate-400 text-xs uppercase tracking-widest">دراسة حالة</h4>
+                <span class="material-icons-outlined text-slate-300">description</span>
             </div>
-
-            <!-- Lesson 2 -->
-            <div class="relative pr-20">
-                 <div class="absolute right-0 top-0 w-18 h-18 bg-[#004a99] text-white rounded-2xl flex flex-col items-center justify-center font-black shadow-lg z-10 hidden md:flex">
-                    <span class="text-xs opacity-60">الدرس</span>
-                    <span class="text-2xl">02</span>
-                </div>
-                <div class="inline-block px-3 py-1 bg-orange-100 text-orange-600 rounded-lg text-xs font-bold mb-4">قيد المراجعة</div>
-                <h2 class="text-3xl font-bold mb-4 text-[#002d72]">إدارة الاعتراضات والشكاوى</h2>
-                
-                <div class="bg-blue-50 border-r-8 border-[#002d72] p-8 mb-8">
-                    <p class="text-xl italic text-blue-900 leading-relaxed">"الشكوى ليست عقبة، بل هي فرصة لاستعادة ولاء العميل وإعادة صياغة نموذج الخدمة الخاص بك."</p>
-                </div>
-
-                <p class="text-gray-600 mb-8">إدارة الأزمات في خدمة العملاء تتطلب ثباتاً انفعالياً ومنهجية تقنية. سنتعلم كيفية تحويل "الاعتراض" إلى "اتفاق"، وفن الحفاظ على العميل حتى في ظل الظروف الصعبة.</p>
-
-                <button class="flex items-center gap-4 p-6 bg-white border border-gray-200 rounded-2xl w-full hover:shadow-md transition-all group">
-                    <span class="material-icons text-gray-400 group-hover:text-[#004a99]">description</span>
-                    <div class="flex-1 text-right">
-                        <div class="text-xs text-gray-400">دراسة حالة</div>
-                        <div class="font-bold">حل المشكلات المعقدة في الوساطة</div>
-                    </div>
-                    <span class="material-icons text-gray-300">arrow_back</span>
-                </button>
+            <div class="flex items-center justify-between group cursor-pointer">
+                <h3 class="text-2xl font-bold text-secondary group-hover:text-primary transition-colors">حل المشكلات المعقدة في الوساطة</h3>
+                <span class="material-icons-outlined text-slate-300 group-hover:translate-x-[-8px] transition-transform">arrow_back</span>
             </div>
         </div>
 
-        <footer class="mt-24 pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex gap-4">
-                <button class="px-8 py-3 bg-gray-100 text-gray-600 rounded-xl font-bold hover:bg-gray-200 transition-all">الدرس السابق</button>
-                <div class="text-right">
-                    <div class="text-xs text-gray-400">الوحدة التالية</div>
-                    <div class="font-bold text-[#004a99]">إدارة الفرق القانونية</div>
-                </div>
+        <div class="mt-16 flex justify-between items-center border-t border-slate-200 pt-8">
+            <div class="text-right">
+                <p class="text-xs text-slate-400 mb-1">الوحدة التالية</p>
+                <a href="/app/employees.html" class="font-bold text-primary hover:underline">إدارة الفرق القانونية</a>
             </div>
-            <button class="px-12 py-4 bg-[#002d72] text-white rounded-2xl font-black shadow-xl hover:scale-105 transition-transform">الاستمرار في التعلم</button>
-        </footer>
-
-    </div>
-
+            <button onclick="window.location.href='/knowledge-base/marketing-strategies.html'" class="px-8 py-3 bg-slate-100 text-slate-500 rounded-xl font-bold hover:bg-slate-200 transition-all">الدرس السابق</button>
+            <button class="px-10 py-4 bg-secondary text-white rounded-2xl font-bold shadow-xl shadow-secondary/20 hover:scale-105 transition-transform">الاستمرار في التعلم</button>
+        </div>
+    </main>
 </body>
 </html>
