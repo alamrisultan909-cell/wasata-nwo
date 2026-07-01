@@ -16,15 +16,11 @@
       "destination": "/crm-system/dashboard.html"
     },
     {
-      "source": "/knowledge-base/(.*)",
-      "destination": "/knowledge-base/$1"
-    },
-    {
       "source": "/knowledge-base",
       "destination": "/knowledge-base/index.html"
     },
     {
-      "source": "/((?!public-site).*)",
+      "source": "/((?!public-site|api|app|knowledge-base).*)",
       "destination": "/public-site/$1"
     }
   ]
