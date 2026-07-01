@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "wasata-platform",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/sheets",
+      "destination": "/app/sheet.js"
+    },
+    {
+      "source": "/app/(.*)",
+      "destination": "/crm-system/$1"
+    },
+    {
+      "source": "/app",
+      "destination": "/crm-system/dashboard.html"
+    },
+    {
+      "source": "/knowledge-base",
+      "destination": "/knowledge-base/index.html"
+    },
+    {
+      "source": "/((?!public-site|api|app|knowledge-base).*)",
+      "destination": "/public-site/$1"
+    }
+  ]
+}
